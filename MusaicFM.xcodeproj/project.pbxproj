@@ -1,0 +1,648 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08413D7CBB6FF19716237235 /* libPods-MusaicFM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B3289E9295C5A6063DB3F2 /* libPods-MusaicFM.a */; };
+		E12275D31DDE5E8400EDC382 /* Artwork.m in Sources */ = {isa = PBXBuildFile; fileRef = E149F98A1DD8C17100D9E39F /* Artwork.m */; };
+		E129C5331DD900A300F93950 /* PreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E129C5321DD900A300F93950 /* PreferencesViewController.xib */; };
+		E129C5361DD9020300F93950 /* PreferencesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E129C5341DD9020300F93950 /* PreferencesViewController.h */; };
+		E129C5371DD9020300F93950 /* PreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E129C5351DD9020300F93950 /* PreferencesViewController.m */; };
+		E13191BB1DE1C4CA005EFA47 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13191BA1DE1C4CA005EFA47 /* WebKit.framework */; };
+		E13191BE1DE1DA9B005EFA47 /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = E13191BC1DE1DA9B005EFA47 /* Constants.h */; };
+		E13191BF1DE1DA9B005EFA47 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E13191BD1DE1DA9B005EFA47 /* Constants.m */; };
+		E13191C01DE1DA9B005EFA47 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E13191BD1DE1DA9B005EFA47 /* Constants.m */; };
+		E13191C11DE1DD19005EFA47 /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = E149F98E1DD8C26C00D9E39F /* Manager.m */; };
+		E13191C41DE1DD26005EFA47 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = E1472E581DD8D45C0007E945 /* NSMutableArray+Shuffle.m */; };
+		E13191C51DE1DD26005EFA47 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = E1472E4C1DD8D0600007E945 /* Parser.m */; };
+		E13E3F4D1DDA4B6F00128CBF /* Preferences.h in Headers */ = {isa = PBXBuildFile; fileRef = E13E3F4B1DDA4B6F00128CBF /* Preferences.h */; };
+		E13E3F4E1DDA4B6F00128CBF /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = E13E3F4C1DDA4B6F00128CBF /* Preferences.m */; };
+		E13E3F4F1DDA4B6F00128CBF /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = E13E3F4C1DDA4B6F00128CBF /* Preferences.m */; };
+		E1472E4A1DD8CB7A0007E945 /* MusaicItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1472E471DD8CAE70007E945 /* MusaicItem.xib */; };
+		E1472E4D1DD8D0600007E945 /* Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = E1472E4B1DD8D0600007E945 /* Parser.h */; };
+		E1472E4E1DD8D0600007E945 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = E1472E4C1DD8D0600007E945 /* Parser.m */; };
+		E1472E521DD8D1C10007E945 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1472E511DD8D1C10007E945 /* Cocoa.framework */; };
+		E1472E541DD8D1C70007E945 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1472E531DD8D1C70007E945 /* Foundation.framework */; };
+		E1472E591DD8D45C0007E945 /* NSMutableArray+Shuffle.h in Headers */ = {isa = PBXBuildFile; fileRef = E1472E571DD8D45C0007E945 /* NSMutableArray+Shuffle.h */; };
+		E1472E5A1DD8D45C0007E945 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = E1472E581DD8D45C0007E945 /* NSMutableArray+Shuffle.m */; };
+		E149F98B1DD8C17100D9E39F /* Artwork.h in Headers */ = {isa = PBXBuildFile; fileRef = E149F9891DD8C17100D9E39F /* Artwork.h */; };
+		E149F98C1DD8C17100D9E39F /* Artwork.m in Sources */ = {isa = PBXBuildFile; fileRef = E149F98A1DD8C17100D9E39F /* Artwork.m */; };
+		E149F98F1DD8C26C00D9E39F /* Manager.h in Headers */ = {isa = PBXBuildFile; fileRef = E149F98D1DD8C26C00D9E39F /* Manager.h */; };
+		E149F9901DD8C26C00D9E39F /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = E149F98E1DD8C26C00D9E39F /* Manager.m */; };
+		E149F9981DD8C6F600D9E39F /* MusaicItem.h in Headers */ = {isa = PBXBuildFile; fileRef = E149F9951DD8C6F600D9E39F /* MusaicItem.h */; };
+		E149F9991DD8C6F600D9E39F /* MusaicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E149F9961DD8C6F600D9E39F /* MusaicItem.m */; };
+		E19BE1FA1DD8F511003C0DB2 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = E19BE1F91DD8F511003C0DB2 /* placeholder.png */; };
+		E1CF259D1DD7D8D500441255 /* MusaicFMView.h in Headers */ = {isa = PBXBuildFile; fileRef = E1CF259C1DD7D8D500441255 /* MusaicFMView.h */; };
+		E1CF259F1DD7D8D500441255 /* MusaicFMView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CF259E1DD7D8D500441255 /* MusaicFMView.m */; };
+		E1D32D821DF2A86E0013574C /* Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = E1D32D801DF2A86E0013574C /* Factory.h */; };
+		E1D32D831DF2A86E0013574C /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D32D811DF2A86E0013574C /* Factory.m */; };
+		E1F291E81DE500E900EBA3F8 /* general@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E21DE500E900EBA3F8 /* general@2x.png */; };
+		E1F291E91DE500E900EBA3F8 /* general@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E21DE500E900EBA3F8 /* general@2x.png */; };
+		E1F291EA1DE500E900EBA3F8 /* generel.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E31DE500E900EBA3F8 /* generel.png */; };
+		E1F291EB1DE500E900EBA3F8 /* generel.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E31DE500E900EBA3F8 /* generel.png */; };
+		E1F291EC1DE500E900EBA3F8 /* lastfm.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E41DE500E900EBA3F8 /* lastfm.png */; };
+		E1F291ED1DE500E900EBA3F8 /* lastfm.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E41DE500E900EBA3F8 /* lastfm.png */; };
+		E1F291EE1DE500E900EBA3F8 /* lastfm2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E51DE500E900EBA3F8 /* lastfm2x.png */; };
+		E1F291EF1DE500E900EBA3F8 /* lastfm2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E51DE500E900EBA3F8 /* lastfm2x.png */; };
+		E1F291F01DE500E900EBA3F8 /* spotify.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E61DE500E900EBA3F8 /* spotify.png */; };
+		E1F291F11DE500E900EBA3F8 /* spotify.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E61DE500E900EBA3F8 /* spotify.png */; };
+		E1F291F21DE500E900EBA3F8 /* spotify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E71DE500E900EBA3F8 /* spotify@2x.png */; };
+		E1F291F31DE500E900EBA3F8 /* spotify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E71DE500E900EBA3F8 /* spotify@2x.png */; };
+		E1FA396C1DDA3FBE00186BE2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FA396B1DDA3FBE00186BE2 /* AppDelegate.m */; };
+		E1FA396F1DDA3FBE00186BE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FA396E1DDA3FBE00186BE2 /* main.m */; };
+		E1FA39711DDA3FBE00186BE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1FA39701DDA3FBE00186BE2 /* Assets.xcassets */; };
+		E1FA39741DDA3FBE00186BE2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1FA39721DDA3FBE00186BE2 /* MainMenu.xib */; };
+		E1FA39791DDA3FF300186BE2 /* PreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E129C5321DD900A300F93950 /* PreferencesViewController.xib */; };
+		E1FA397A1DDA3FF300186BE2 /* PreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E129C5351DD9020300F93950 /* PreferencesViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		37B8A63297434C87281E7520 /* Pods-MusaicFM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusaicFM.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusaicFM/Pods-MusaicFM.release.xcconfig"; sourceTree = "<group>"; };
+		C7FEC3508F55C0BA200D3BC0 /* Pods-MusaicFM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusaicFM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusaicFM/Pods-MusaicFM.debug.xcconfig"; sourceTree = "<group>"; };
+		E129C5321DD900A300F93950 /* PreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesViewController.xib; sourceTree = "<group>"; };
+		E129C5341DD9020300F93950 /* PreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesViewController.h; sourceTree = "<group>"; };
+		E129C5351DD9020300F93950 /* PreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesViewController.m; sourceTree = "<group>"; };
+		E13191BA1DE1C4CA005EFA47 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		E13191BC1DE1DA9B005EFA47 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		E13191BD1DE1DA9B005EFA47 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		E13E3F4B1DDA4B6F00128CBF /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
+		E13E3F4C1DDA4B6F00128CBF /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
+		E1472E471DD8CAE70007E945 /* MusaicItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusaicItem.xib; sourceTree = "<group>"; };
+		E1472E4B1DD8D0600007E945 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
+		E1472E4C1DD8D0600007E945 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
+		E1472E511DD8D1C10007E945 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E1472E531DD8D1C70007E945 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E1472E571DD8D45C0007E945 /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
+		E1472E581DD8D45C0007E945 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
+		E149F9891DD8C17100D9E39F /* Artwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Artwork.h; sourceTree = "<group>"; };
+		E149F98A1DD8C17100D9E39F /* Artwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Artwork.m; sourceTree = "<group>"; };
+		E149F98D1DD8C26C00D9E39F /* Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
+		E149F98E1DD8C26C00D9E39F /* Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
+		E149F9951DD8C6F600D9E39F /* MusaicItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusaicItem.h; sourceTree = "<group>"; };
+		E149F9961DD8C6F600D9E39F /* MusaicItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusaicItem.m; sourceTree = "<group>"; };
+		E19BE1F91DD8F511003C0DB2 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		E1CF25991DD7D8D500441255 /* MusaicFM.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusaicFM.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1CF259C1DD7D8D500441255 /* MusaicFMView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusaicFMView.h; sourceTree = "<group>"; };
+		E1CF259E1DD7D8D500441255 /* MusaicFMView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusaicFMView.m; sourceTree = "<group>"; };
+		E1CF25A01DD7D8D500441255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1D32D801DF2A86E0013574C /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Factory.h; sourceTree = "<group>"; };
+		E1D32D811DF2A86E0013574C /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factory.m; sourceTree = "<group>"; };
+		E1F291E21DE500E900EBA3F8 /* general@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "general@2x.png"; sourceTree = "<group>"; };
+		E1F291E31DE500E900EBA3F8 /* generel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = generel.png; sourceTree = "<group>"; };
+		E1F291E41DE500E900EBA3F8 /* lastfm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lastfm.png; sourceTree = "<group>"; };
+		E1F291E51DE500E900EBA3F8 /* lastfm2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lastfm2x.png; sourceTree = "<group>"; };
+		E1F291E61DE500E900EBA3F8 /* spotify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spotify.png; sourceTree = "<group>"; };
+		E1F291E71DE500E900EBA3F8 /* spotify@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spotify@2x.png"; sourceTree = "<group>"; };
+		E1FA39681DDA3FBE00186BE2 /* MusaicFMPreferences.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusaicFMPreferences.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1FA396A1DDA3FBE00186BE2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E1FA396B1DDA3FBE00186BE2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E1FA396E1DDA3FBE00186BE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E1FA39701DDA3FBE00186BE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1FA39731DDA3FBE00186BE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E1FA39751DDA3FBE00186BE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9B3289E9295C5A6063DB3F2 /* libPods-MusaicFM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusaicFM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1CF25951DD7D8D500441255 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1472E541DD8D1C70007E945 /* Foundation.framework in Frameworks */,
+				E1472E521DD8D1C10007E945 /* Cocoa.framework in Frameworks */,
+				08413D7CBB6FF19716237235 /* libPods-MusaicFM.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1FA39651DDA3FBE00186BE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E13191BB1DE1C4CA005EFA47 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B60AFEB1108005ABD06797A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7FEC3508F55C0BA200D3BC0 /* Pods-MusaicFM.debug.xcconfig */,
+				37B8A63297434C87281E7520 /* Pods-MusaicFM.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E11237F81DE50578005E6D06 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E1CF25A01DD7D8D500441255 /* Info.plist */,
+				E19BE1F91DD8F511003C0DB2 /* placeholder.png */,
+				E1F291E21DE500E900EBA3F8 /* general@2x.png */,
+				E1F291E31DE500E900EBA3F8 /* generel.png */,
+				E1F291E41DE500E900EBA3F8 /* lastfm.png */,
+				E1F291E51DE500E900EBA3F8 /* lastfm2x.png */,
+				E1F291E61DE500E900EBA3F8 /* spotify.png */,
+				E1F291E71DE500E900EBA3F8 /* spotify@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E11237FB1DE5059B005E6D06 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E149F9891DD8C17100D9E39F /* Artwork.h */,
+				E149F98A1DD8C17100D9E39F /* Artwork.m */,
+				E13191BC1DE1DA9B005EFA47 /* Constants.h */,
+				E13191BD1DE1DA9B005EFA47 /* Constants.m */,
+				E149F98D1DD8C26C00D9E39F /* Manager.h */,
+				E149F98E1DD8C26C00D9E39F /* Manager.m */,
+				E1CF259C1DD7D8D500441255 /* MusaicFMView.h */,
+				E1CF259E1DD7D8D500441255 /* MusaicFMView.m */,
+				E149F9951DD8C6F600D9E39F /* MusaicItem.h */,
+				E149F9961DD8C6F600D9E39F /* MusaicItem.m */,
+				E1472E471DD8CAE70007E945 /* MusaicItem.xib */,
+				E1472E571DD8D45C0007E945 /* NSMutableArray+Shuffle.h */,
+				E1472E581DD8D45C0007E945 /* NSMutableArray+Shuffle.m */,
+				E1472E4B1DD8D0600007E945 /* Parser.h */,
+				E1472E4C1DD8D0600007E945 /* Parser.m */,
+				E13E3F4B1DDA4B6F00128CBF /* Preferences.h */,
+				E13E3F4C1DDA4B6F00128CBF /* Preferences.m */,
+				E129C5341DD9020300F93950 /* PreferencesViewController.h */,
+				E129C5351DD9020300F93950 /* PreferencesViewController.m */,
+				E129C5321DD900A300F93950 /* PreferencesViewController.xib */,
+				E1D32D801DF2A86E0013574C /* Factory.h */,
+				E1D32D811DF2A86E0013574C /* Factory.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		E1472E501DD8D1C10007E945 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E13191BA1DE1C4CA005EFA47 /* WebKit.framework */,
+				E1472E531DD8D1C70007E945 /* Foundation.framework */,
+				E1472E511DD8D1C10007E945 /* Cocoa.framework */,
+				E9B3289E9295C5A6063DB3F2 /* libPods-MusaicFM.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1CF258F1DD7D8D500441255 = {
+			isa = PBXGroup;
+			children = (
+				E1CF259B1DD7D8D500441255 /* MusaicFM */,
+				E1FA39691DDA3FBE00186BE2 /* MusaicFMPreferences */,
+				E1CF259A1DD7D8D500441255 /* Products */,
+				E1472E501DD8D1C10007E945 /* Frameworks */,
+				B60AFEB1108005ABD06797A2 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		E1CF259A1DD7D8D500441255 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1CF25991DD7D8D500441255 /* MusaicFM.saver */,
+				E1FA39681DDA3FBE00186BE2 /* MusaicFMPreferences.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1CF259B1DD7D8D500441255 /* MusaicFM */ = {
+			isa = PBXGroup;
+			children = (
+				E11237FB1DE5059B005E6D06 /* Classes */,
+				E11237F81DE50578005E6D06 /* Resources */,
+			);
+			path = MusaicFM;
+			sourceTree = "<group>";
+		};
+		E1FA39691DDA3FBE00186BE2 /* MusaicFMPreferences */ = {
+			isa = PBXGroup;
+			children = (
+				E1FA396A1DDA3FBE00186BE2 /* AppDelegate.h */,
+				E1FA396B1DDA3FBE00186BE2 /* AppDelegate.m */,
+				E1FA39701DDA3FBE00186BE2 /* Assets.xcassets */,
+				E1FA39721DDA3FBE00186BE2 /* MainMenu.xib */,
+				E1FA39751DDA3FBE00186BE2 /* Info.plist */,
+				E1FA396D1DDA3FBE00186BE2 /* Supporting Files */,
+			);
+			path = MusaicFMPreferences;
+			sourceTree = "<group>";
+		};
+		E1FA396D1DDA3FBE00186BE2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1FA396E1DDA3FBE00186BE2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E1CF25961DD7D8D500441255 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1CF259D1DD7D8D500441255 /* MusaicFMView.h in Headers */,
+				E149F98F1DD8C26C00D9E39F /* Manager.h in Headers */,
+				E129C5361DD9020300F93950 /* PreferencesViewController.h in Headers */,
+				E149F98B1DD8C17100D9E39F /* Artwork.h in Headers */,
+				E149F9981DD8C6F600D9E39F /* MusaicItem.h in Headers */,
+				E1D32D821DF2A86E0013574C /* Factory.h in Headers */,
+				E13191BE1DE1DA9B005EFA47 /* Constants.h in Headers */,
+				E13E3F4D1DDA4B6F00128CBF /* Preferences.h in Headers */,
+				E1472E591DD8D45C0007E945 /* NSMutableArray+Shuffle.h in Headers */,
+				E1472E4D1DD8D0600007E945 /* Parser.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E1CF25981DD7D8D500441255 /* MusaicFM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1CF25A31DD7D8D500441255 /* Build configuration list for PBXNativeTarget "MusaicFM" */;
+			buildPhases = (
+				2CD44E79CD08C0EC1D215D30 /* [CP] Check Pods Manifest.lock */,
+				E1CF25941DD7D8D500441255 /* Sources */,
+				E1CF25951DD7D8D500441255 /* Frameworks */,
+				E1CF25961DD7D8D500441255 /* Headers */,
+				E1CF25971DD7D8D500441255 /* Resources */,
+				41303878F810D7D358513AC9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MusaicFM;
+			productName = MusaicFM;
+			productReference = E1CF25991DD7D8D500441255 /* MusaicFM.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+		E1FA39671DDA3FBE00186BE2 /* MusaicFMPreferences */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1FA39761DDA3FBE00186BE2 /* Build configuration list for PBXNativeTarget "MusaicFMPreferences" */;
+			buildPhases = (
+				E1FA39641DDA3FBE00186BE2 /* Sources */,
+				E1FA39651DDA3FBE00186BE2 /* Frameworks */,
+				E1FA39661DDA3FBE00186BE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MusaicFMPreferences;
+			productName = MusaicFMPreferences;
+			productReference = E1FA39681DDA3FBE00186BE2 /* MusaicFMPreferences.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1CF25901DD7D8D500441255 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Dennis Oberhoff";
+				TargetAttributes = {
+					E1CF25981DD7D8D500441255 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = YE33ZK7Z99;
+						ProvisioningStyle = Automatic;
+					};
+					E1FA39671DDA3FBE00186BE2 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 4KVE7RV699;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E1CF25931DD7D8D500441255 /* Build configuration list for PBXProject "MusaicFM" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E1CF258F1DD7D8D500441255;
+			productRefGroup = E1CF259A1DD7D8D500441255 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E1CF25981DD7D8D500441255 /* MusaicFM */,
+				E1FA39671DDA3FBE00186BE2 /* MusaicFMPreferences */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E1CF25971DD7D8D500441255 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E19BE1FA1DD8F511003C0DB2 /* placeholder.png in Resources */,
+				E1F291E81DE500E900EBA3F8 /* general@2x.png in Resources */,
+				E1F291EE1DE500E900EBA3F8 /* lastfm2x.png in Resources */,
+				E129C5331DD900A300F93950 /* PreferencesViewController.xib in Resources */,
+				E1F291F21DE500E900EBA3F8 /* spotify@2x.png in Resources */,
+				E1F291F01DE500E900EBA3F8 /* spotify.png in Resources */,
+				E1F291EA1DE500E900EBA3F8 /* generel.png in Resources */,
+				E1F291EC1DE500E900EBA3F8 /* lastfm.png in Resources */,
+				E1472E4A1DD8CB7A0007E945 /* MusaicItem.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1FA39661DDA3FBE00186BE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1FA39711DDA3FBE00186BE2 /* Assets.xcassets in Resources */,
+				E1F291E91DE500E900EBA3F8 /* general@2x.png in Resources */,
+				E1F291EF1DE500E900EBA3F8 /* lastfm2x.png in Resources */,
+				E1FA39741DDA3FBE00186BE2 /* MainMenu.xib in Resources */,
+				E1F291F31DE500E900EBA3F8 /* spotify@2x.png in Resources */,
+				E1F291F11DE500E900EBA3F8 /* spotify.png in Resources */,
+				E1F291EB1DE500E900EBA3F8 /* generel.png in Resources */,
+				E1F291ED1DE500E900EBA3F8 /* lastfm.png in Resources */,
+				E1FA39791DDA3FF300186BE2 /* PreferencesViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CD44E79CD08C0EC1D215D30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		41303878F810D7D358513AC9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusaicFM/Pods-MusaicFM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E1CF25941DD7D8D500441255 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1D32D831DF2A86E0013574C /* Factory.m in Sources */,
+				E149F9991DD8C6F600D9E39F /* MusaicItem.m in Sources */,
+				E1CF259F1DD7D8D500441255 /* MusaicFMView.m in Sources */,
+				E13E3F4E1DDA4B6F00128CBF /* Preferences.m in Sources */,
+				E149F98C1DD8C17100D9E39F /* Artwork.m in Sources */,
+				E129C5371DD9020300F93950 /* PreferencesViewController.m in Sources */,
+				E149F9901DD8C26C00D9E39F /* Manager.m in Sources */,
+				E1472E4E1DD8D0600007E945 /* Parser.m in Sources */,
+				E1472E5A1DD8D45C0007E945 /* NSMutableArray+Shuffle.m in Sources */,
+				E13191BF1DE1DA9B005EFA47 /* Constants.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1FA39641DDA3FBE00186BE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E13191C51DE1DD26005EFA47 /* Parser.m in Sources */,
+				E1FA397A1DDA3FF300186BE2 /* PreferencesViewController.m in Sources */,
+				E13191C41DE1DD26005EFA47 /* NSMutableArray+Shuffle.m in Sources */,
+				E1FA396F1DDA3FBE00186BE2 /* main.m in Sources */,
+				E12275D31DDE5E8400EDC382 /* Artwork.m in Sources */,
+				E13E3F4F1DDA4B6F00128CBF /* Preferences.m in Sources */,
+				E1FA396C1DDA3FBE00186BE2 /* AppDelegate.m in Sources */,
+				E13191C01DE1DA9B005EFA47 /* Constants.m in Sources */,
+				E13191C11DE1DD19005EFA47 /* Manager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E1FA39721DDA3FBE00186BE2 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1FA39731DDA3FBE00186BE2 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E1CF25A11DD7D8D500441255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E1CF25A21DD7D8D500441255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E1CF25A41DD7D8D500441255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7FEC3508F55C0BA200D3BC0 /* Pods-MusaicFM.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = YE33ZK7Z99;
+				INFOPLIST_FILE = MusaicFM/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.obrhoff.MusaicFM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Debug;
+		};
+		E1CF25A51DD7D8D500441255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37B8A63297434C87281E7520 /* Pods-MusaicFM.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = YE33ZK7Z99;
+				INFOPLIST_FILE = MusaicFM/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.obrhoff.MusaicFM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+		E1FA39771DDA3FBE00186BE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4KVE7RV699;
+				INFOPLIST_FILE = MusaicFMPreferences/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.obrhoff.MusaicFMPreferences;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E1FA39781DDA3FBE00186BE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4KVE7RV699;
+				INFOPLIST_FILE = MusaicFMPreferences/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.obrhoff.MusaicFMPreferences;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E1CF25931DD7D8D500441255 /* Build configuration list for PBXProject "MusaicFM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1CF25A11DD7D8D500441255 /* Debug */,
+				E1CF25A21DD7D8D500441255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1CF25A31DD7D8D500441255 /* Build configuration list for PBXNativeTarget "MusaicFM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1CF25A41DD7D8D500441255 /* Debug */,
+				E1CF25A51DD7D8D500441255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1FA39761DDA3FBE00186BE2 /* Build configuration list for PBXNativeTarget "MusaicFMPreferences" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1FA39771DDA3FBE00186BE2 /* Debug */,
+				E1FA39781DDA3FBE00186BE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E1CF25901DD7D8D500441255 /* Project object */;
+}
