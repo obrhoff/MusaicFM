@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08413D7CBB6FF19716237235 /* libPods-MusaicFM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B3289E9295C5A6063DB3F2 /* libPods-MusaicFM.a */; };
+		79F4836421DBBEFB00F24553 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D32D811DF2A86E0013574C /* Factory.m */; };
 		E12275D31DDE5E8400EDC382 /* Artwork.m in Sources */ = {isa = PBXBuildFile; fileRef = E149F98A1DD8C17100D9E39F /* Artwork.m */; };
 		E129C5331DD900A300F93950 /* PreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E129C5321DD900A300F93950 /* PreferencesViewController.xib */; };
 		E129C5361DD9020300F93950 /* PreferencesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E129C5341DD9020300F93950 /* PreferencesViewController.h */; };
@@ -275,7 +276,6 @@
 				E1CF25951DD7D8D500441255 /* Frameworks */,
 				E1CF25961DD7D8D500441255 /* Headers */,
 				E1CF25971DD7D8D500441255 /* Resources */,
-				41303878F810D7D358513AC9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -385,28 +385,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MusaicFM-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		41303878F810D7D358513AC9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusaicFM/Pods-MusaicFM-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -433,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F4836421DBBEFB00F24553 /* Factory.m in Sources */,
 				E13191C51DE1DD26005EFA47 /* Parser.m in Sources */,
 				E1FA397A1DDA3FF300186BE2 /* PreferencesViewController.m in Sources */,
 				E13191C41DE1DD26005EFA47 /* NSMutableArray+Shuffle.m in Sources */,
