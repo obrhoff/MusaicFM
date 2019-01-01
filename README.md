@@ -6,7 +6,7 @@ MusaicFM is completely open source, so feel free to contribute to its developmen
 
 ## Installation
 
-1. [Click here to Download](https://github.com/docterd/MusaicFM/releases/download/1.0/MusaicFM.saver.zip)
+1. [Click here to Download](https://github.com/docterd/MusaicFM/releases/download/1.1/MusaicFM.saver.zip)
 2. Unzip the downloaded file.
 3. Open **MusaicFM.saver** and confirm installation.
 
@@ -15,4 +15,4 @@ MusaicFM is completely open source, so feel free to contribute to its developmen
 1. Open System Preferences -> Desktop & Screen Saver -> Screen Saver
 2. Choose MusaicFM and click on Screen Saver Options to select your settings or login.
 
-![Screenshot](http://i.imgur.com/OuF5nOe.jpg)
+![Screenshot](http://share.obrhoff.de/oieVCk+)

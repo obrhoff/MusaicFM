@@ -314,12 +314,10 @@
 				TargetAttributes = {
 					E1CF25981DD7D8D500441255 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = YE33ZK7Z99;
 						ProvisioningStyle = Automatic;
 					};
 					E1FA39671DDA3FBE00186BE2 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 4KVE7RV699;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -543,7 +541,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = YE33ZK7Z99;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MusaicFM/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -559,7 +557,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = YE33ZK7Z99;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MusaicFM/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -576,7 +574,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 4KVE7RV699;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MusaicFMPreferences/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -592,7 +590,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 4KVE7RV699;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MusaicFMPreferences/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
