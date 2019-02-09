@@ -9,7 +9,6 @@ MusaicFM is completely open source, so feel free to contribute to its developmen
 ### Homebrew
 
 ```
-$ brew tap martindelille/tap
 $ brew cask install musaicfm
 ```
 
