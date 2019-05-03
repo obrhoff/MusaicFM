@@ -44,7 +44,7 @@
 
 - (void)commonInit {
     self.wantsLayer = YES;
-    self.animationTimeInterval = 1 / 60;
+    self.animationTimeInterval = 60;
 
     Preferences *preferences = [Preferences preferences];
     self.rows = preferences.rows;
