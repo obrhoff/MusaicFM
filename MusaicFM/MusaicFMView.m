@@ -82,6 +82,10 @@
 - (void)loadData {
     __weak typeof(self) weakSelf = self;
     void (^ done)(NSArray *artworks) = ^void (NSArray *new) {
+        if (new.count == 0) {
+            return;
+        }
+        
         NSInteger maximalCount = [weakSelf maximalCount];
         NSMutableArray *artworks = [NSMutableArray arrayWithCapacity:maximalCount];
         while (artworks.count < maximalCount)
