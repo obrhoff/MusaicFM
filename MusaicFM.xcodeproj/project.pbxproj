@@ -23,6 +23,8 @@
 		E13E3F4D1DDA4B6F00128CBF /* Preferences.h in Headers */ = {isa = PBXBuildFile; fileRef = E13E3F4B1DDA4B6F00128CBF /* Preferences.h */; };
 		E13E3F4E1DDA4B6F00128CBF /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = E13E3F4C1DDA4B6F00128CBF /* Preferences.m */; };
 		E13E3F4F1DDA4B6F00128CBF /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = E13E3F4C1DDA4B6F00128CBF /* Preferences.m */; };
+		E140AB042281B1C600748BA2 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = E140AB022281B1C600748BA2 /* thumbnail.png */; };
+		E140AB052281B1C600748BA2 /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E140AB032281B1C600748BA2 /* thumbnail@2x.png */; };
 		E1472E4A1DD8CB7A0007E945 /* MusaicItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1472E471DD8CAE70007E945 /* MusaicItem.xib */; };
 		E1472E4D1DD8D0600007E945 /* Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = E1472E4B1DD8D0600007E945 /* Parser.h */; };
 		E1472E4E1DD8D0600007E945 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = E1472E4C1DD8D0600007E945 /* Parser.m */; };
@@ -72,6 +74,8 @@
 		E13191BD1DE1DA9B005EFA47 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		E13E3F4B1DDA4B6F00128CBF /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
 		E13E3F4C1DDA4B6F00128CBF /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
+		E140AB022281B1C600748BA2 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		E140AB032281B1C600748BA2 /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
 		E1472E471DD8CAE70007E945 /* MusaicItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusaicItem.xib; sourceTree = "<group>"; };
 		E1472E4B1DD8D0600007E945 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
 		E1472E4C1DD8D0600007E945 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 		E11237F81DE50578005E6D06 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E140AB022281B1C600748BA2 /* thumbnail.png */,
+				E140AB032281B1C600748BA2 /* thumbnail@2x.png */,
 				E1CF25A01DD7D8D500441255 /* Info.plist */,
 				E19BE1F91DD8F511003C0DB2 /* placeholder.png */,
 				E1F291E21DE500E900EBA3F8 /* general@2x.png */,
@@ -327,6 +333,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -348,8 +355,10 @@
 			files = (
 				E19BE1FA1DD8F511003C0DB2 /* placeholder.png in Resources */,
 				E1F291E81DE500E900EBA3F8 /* general@2x.png in Resources */,
+				E140AB052281B1C600748BA2 /* thumbnail@2x.png in Resources */,
 				E1F291EE1DE500E900EBA3F8 /* lastfm2x.png in Resources */,
 				E129C5331DD900A300F93950 /* PreferencesViewController.xib in Resources */,
+				E140AB042281B1C600748BA2 /* thumbnail.png in Resources */,
 				E1F291F21DE500E900EBA3F8 /* spotify@2x.png in Resources */,
 				E1F291F01DE500E900EBA3F8 /* spotify.png in Resources */,
 				E1F291EA1DE500E900EBA3F8 /* generel.png in Resources */,
