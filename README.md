@@ -14,7 +14,7 @@ $ brew cask install musaicfm
 
 ### Manual
 
-1. [Click here to Download](https://github.com/docterd/MusaicFM/releases/download/1.1/MusaicFM.saver.zip)
+1. [Click here to Download](https://github.com/docterd/MusaicFM/releases/latest/download/MusaicFM.saver.zip)
 2. Unzip the downloaded file.
 3. Open **MusaicFM.saver** and confirm installation.
 
