@@ -23,4 +23,4 @@ $ brew cask install musaicfm
 1. Open System Preferences -> Desktop & Screen Saver -> Screen Saver
 2. Choose MusaicFM and click on Screen Saver Options to select your settings or login.
 
-![Screenshot](http://share.obrhoff.de/oieVCk+)
+![Screenshot](screenshot.png)
