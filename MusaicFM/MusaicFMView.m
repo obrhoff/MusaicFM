@@ -82,22 +82,29 @@
 - (void)loadData {
     __weak typeof(self) weakSelf = self;
     void (^ done)(NSArray *artworks) = ^void (NSArray *new) {
-        if (new.count == 0) {
+        
+        NSPredicate *removePredicate = [NSPredicate predicateWithFormat:@"artworkUrl.absoluteString.length > 0"];
+        NSArray *newItems = [new filteredArrayUsingPredicate:removePredicate];
+
+        if (newItems.count == 0) {
             return;
         }
         
         NSInteger maximalCount = [weakSelf maximalCount];
         NSMutableArray *artworks = [NSMutableArray arrayWithCapacity:maximalCount];
-        while (artworks.count < maximalCount)
-            [artworks addObjectsFromArray:new];
+        
+        while (artworks.count < maximalCount) {
+            [artworks addObjectsFromArray:newItems];
+        }
+        
         NSMutableArray *shuffled = artworks.mutableCopy;
         [shuffled shuffle];
         [shuffled trim:maximalCount];
 
         weakSelf.totalItems = artworks;
         weakSelf.currentItems = shuffled.copy;
-
-        weakSelf.timer = [NSTimer scheduledTimerWithTimeInterval:(NSTimeInterval)weakSelf.delay target:weakSelf selector:@selector(animate) userInfo:nil repeats:YES];
+        weakSelf.timer = [NSTimer scheduledTimerWithTimeInterval:(NSTimeInterval)weakSelf.delay
+                                                          target:weakSelf selector:@selector(animate) userInfo:nil repeats:YES];
         [weakSelf.collectionView reloadData];
     };
 
