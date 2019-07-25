@@ -13,6 +13,8 @@
 + (NSURLRequest *)lastFmRequest:(NSArray *)queryItems;
 
 + (NSURLComponents *)spotifyAlbums;
++ (NSURLComponents *)spotifyTracks;
++ (NSURLComponents *)spotifyArtists;
 + (NSURLComponents *)spotifyNewReleases;
 + (NSURLComponents *)spotifyToken;
 + (NSURLComponents *)spotifyAuthentification;
