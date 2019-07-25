@@ -32,8 +32,10 @@
 
 @end
 
+// intergace extends ScreenSaverView
 @implementation MusaicFMView
 
+// Step 2. Your module is instantiated and its init(frame:isPreview:) routine is called.
 - (instancetype)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview {
     self = [super initWithFrame:frame isPreview:isPreview];
     if (self) {
@@ -45,37 +47,37 @@
 - (void)commonInit {
     self.wantsLayer = YES;
     self.animationTimeInterval = 60;
-
+    
     Preferences *preferences = [Preferences preferences];
     self.rows = preferences.rows;
     self.delay = preferences.delays;
-
+    
     self.manager = [Manager new];
     self.manager.preferences = [Preferences preferences];
-
+    
     self.collectionViewLayout = [NSCollectionViewFlowLayout new];
     self.collectionViewLayout.minimumInteritemSpacing = 0.0;
     self.collectionViewLayout.minimumLineSpacing = 0.0;
-
+    
     CGFloat size = CGRectGetHeight(self.bounds) / (CGFloat)self.rows;
     self.collectionViewLayout.itemSize = CGSizeMake(size, size);
-
+    
     self.collectionView = [[NSCollectionView alloc] initWithFrame:NSZeroRect];
     self.collectionView.collectionViewLayout = self.collectionViewLayout;
-
+    
     [self.collectionView registerClass:[MusaicItem class] forItemWithIdentifier:NSStringFromClass([MusaicItem class])];
-
+    
     self.collectionView.wantsLayer = YES;
     self.collectionView.dataSource = self;
     self.collectionView.backgroundColors = @[[NSColor colorWithRed:0.11 green:0.11 blue:0.13 alpha:1.00]];
-
+    
     [self addSubview:self.collectionView];
-
+    
     NSRect calculatedBounds = [self calculateFrameRect:self.bounds];
     CGFloat offsetY = (calculatedBounds.size.height - self.bounds.size.height) / 2;
     CGFloat offsetX = (calculatedBounds.size.width - self.bounds.size.width) / 2;
     self.collectionView.frame = NSOffsetRect(calculatedBounds, -offsetX, -offsetY);
-
+    
     [self loadData];
 }
 
@@ -85,7 +87,7 @@
         
         NSPredicate *removePredicate = [NSPredicate predicateWithFormat:@"artworkUrl.absoluteString.length > 0"];
         NSArray *newItems = [new filteredArrayUsingPredicate:removePredicate];
-
+        
         if (newItems.count == 0) {
             return;
         }
@@ -100,36 +102,40 @@
         NSMutableArray *shuffled = artworks.mutableCopy;
         [shuffled shuffle];
         [shuffled trim:maximalCount];
-
+        
         weakSelf.totalItems = artworks;
         weakSelf.currentItems = shuffled.copy;
         weakSelf.timer = [NSTimer scheduledTimerWithTimeInterval:(NSTimeInterval)weakSelf.delay
                                                           target:weakSelf selector:@selector(animate) userInfo:nil repeats:YES];
         [weakSelf.collectionView reloadData];
     };
-
+    
     void (^ failure)(NSError *error) = ^void (NSError *error) {
         Preferences *preferences = [Preferences preferences];
         if (preferences.artworks.count) done(preferences.artworks);
     };
-
+    
     switch ([Preferences preferences].mode) {
         case PreferencesModeLastFmUser:
             [self.manager performLastfmWeekly:done andFailure:failure];
             break;
-
+            
         case PreferencesModeTag:
             [self.manager performLastfmTag:done andFailure:failure];
             break;
-
+            
         case PreferencesModeSpotifyUser:
             [self.manager performSpotifyUserAlbums:done andFailure:failure];
             break;
-
+            
         case PreferencesModeSpotifyReleases:
             [self.manager performSpotifyReleases:done andFailure:failure];
             break;
-
+            
+        case PreferencesModeSpotifyLikedSongs:
+            [self.manager performSpotifyLikedSongs:done andFailure:failure];
+            break;
+            
         default:
             break;
     }
@@ -140,10 +146,10 @@
     NSMutableArray *totalItem = self.totalItems.mutableCopy;
     [totalItem removeObjectsInArray:current];
     if (!totalItem.count) return;
-
+    
     NSInteger currentIndex = SSRandomIntBetween(0, (int)current.count - 1);
     NSInteger totalIndex = SSRandomIntBetween(0, (int)totalItem.count - 1);
-
+    
     Artwork *newArtwork = [totalItem objectAtIndex:totalIndex];
     current[currentIndex] = newArtwork;
     MusaicItem *item = (MusaicItem *)[self.collectionView itemAtIndex:currentIndex];

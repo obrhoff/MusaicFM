@@ -14,10 +14,10 @@
 
 + (NSURLRequest *)lastFmRequest:(NSArray *)queryItems {
     NSMutableArray *items = queryItems ? queryItems.mutableCopy : [NSMutableArray new];
-
+    
     [items addObjectsFromArray:@[[NSURLQueryItem queryItemWithName:@"api_key" value:lastFmId],
                                  [NSURLQueryItem queryItemWithName:@"format" value:@"json"]]];
-
+    
     NSURLComponents *components = [NSURLComponents new];
     components.scheme = @"https";
     components.host = @"ws.audioscrobbler.com";
@@ -34,6 +34,13 @@
     return components;
 }
 
++ (NSURLComponents *)spotifyTracks {
+    NSURLComponents *components = [NSURLComponents new];
+    components.scheme = @"https";
+    components.host = @"api.spotify.com";
+    components.path = @"/v1/me/tracks";
+    return components;
+}
 
 + (NSURLComponents *)spotifyNewReleases {
     NSURLComponents *components = [NSURLComponents new];
@@ -43,6 +50,14 @@
     return components;
 }
 
++ (NSURLComponents *)spotifyArtists {
+    NSURLComponents *components = [NSURLComponents new];
+    components.scheme = @"https";
+    components.host = @"api.spotify.com";
+    components.path = @"/v1/me/following";
+    components.queryItems = @[[NSURLQueryItem queryItemWithName:@"type" value:@"artist"]];
+    return components;
+}
 
 + (NSURLComponents *)spotifyToken {
     NSURLComponents *components = [NSURLComponents new];
@@ -62,7 +77,7 @@
                               [NSURLQueryItem queryItemWithName:@"scope" value:@"user-library-read"],
                               [NSURLQueryItem queryItemWithName:@"show_dialog" value:@"true"],
                               [NSURLQueryItem queryItemWithName:@"redirect_uri" value:spotifyRedirectUrl]];
-
+    
     return components;
 }
 
