@@ -136,6 +136,10 @@
             [self.manager performSpotifyLikedSongs:done andFailure:failure];
             break;
             
+        case PreferencesModeSpotifyArtists:
+            [self.manager performSpotifyArtists:done andFailure:failure];
+            break;
+            
         default:
             break;
     }
