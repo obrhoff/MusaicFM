@@ -32,7 +32,6 @@
 @property (nonatomic, readwrite, weak) IBOutlet NSButton *spotifyNewRadio;
 @property (nonatomic, readwrite, weak) IBOutlet NSButton *spotifyFavoriteSongs;
 @property (nonatomic, readwrite, weak) IBOutlet NSButton *spotifyArtists;
-@property (nonatomic, readwrite, weak) IBOutlet NSButton *spotifyRecentlyPlayed;
 @property (nonatomic, readwrite, weak) IBOutlet NSButton *spotifySignIn;
 
 @property (nonatomic, readwrite, weak) IBOutlet NSPopUpButton *lastFmWeeklyButton;
@@ -95,7 +94,7 @@
 }
 
 - (NSArray *)radioButtons {
-    return @[self.lastFmUserRadio, self.lastFmTagRadio, self.spotifyUserRadio, self.spotifyNewRadio, self.spotifyFavoriteSongs];
+    return @[self.lastFmUserRadio, self.lastFmTagRadio, self.spotifyUserRadio, self.spotifyNewRadio, self.spotifyFavoriteSongs, self.spotifyArtists];
 }
 
 - (void)windowDidLoad {
