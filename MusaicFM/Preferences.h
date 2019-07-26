@@ -14,6 +14,7 @@ typedef NS_ENUM (NSUInteger, PreferencesMode) {
     PreferencesModeSpotifyUser = 2,
     PreferencesModeSpotifyReleases = 3,
     PreferencesModeSpotifyLikedSongs = 4,
+    PreferencesModeSpotifyArtists = 5,
 };
 
 @interface Preferences : NSObject <NSCoding>

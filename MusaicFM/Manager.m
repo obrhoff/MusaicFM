@@ -154,8 +154,59 @@
         }
         next.count ? [self performSpotifyTokenRequest:next.copy withCompletionHandler:finalCompletion andFailure:failure] : finalCompletion(total.copy);
     };
-    
+    // make first request / start api get process
     [self performSpotifyTokenRequest:@[create(0)] withCompletionHandler:initialCompletion andFailure:failure];
+}
+
+// instance method -
+- (void)performSpotifyArtists:(void (^)(NSArray *items))completion andFailure:(void (^)(NSError *error))failure {
+ 
+    NSURLRequest * (^ create)(NSString *after) = ^NSURLRequest * (NSString *after) {
+        NSURLComponents *offsetComponents = [Factory spotifyArtists];
+        NSMutableArray *queryItems = offsetComponents.queryItems
+                                        ? [NSMutableArray arrayWithArray: offsetComponents.queryItems]
+                                        : [NSMutableArray new];
+        [queryItems addObject:[NSURLQueryItem queryItemWithName:@"limit" value:@"50"]];
+        if ([after length] != 0) {
+            [queryItems addObject:[NSURLQueryItem queryItemWithName:@"after" value:after]];
+        }
+        offsetComponents.queryItems = queryItems;
+        
+        return [NSURLRequest requestWithURL:offsetComponents.URL];
+    };
+    
+    NSMutableArray *total = [NSMutableArray array];
+    void (^ finalCompletion)(NSArray *responses) = ^void (NSArray *responses) {
+        [total addObjectsFromArray:responses];
+
+        NSMutableArray *itemDicts = [NSMutableArray array];
+        for (NSDictionary *itemDict in responses) {
+            [itemDicts addObjectsFromArray:itemDict[@"artists"][@"items"]];
+        }
+        
+        NSArray *artworks = [Parser parseSpotifyItems:itemDicts];
+        Preferences *preferences = [Preferences preferences];
+        preferences.artworks = artworks;
+        [preferences synchronize];
+        if (completion) completion(artworks);
+    };
+    
+    __block __weak void (^weakInitialCompletion)(NSArray *responses);
+    void (^ initialCompletion)(NSArray *responses);
+    weakInitialCompletion = initialCompletion = ^void (NSArray *responses) {
+        [total addObjectsFromArray:responses];
+        
+        NSDictionary *initial = responses.firstObject[@"artists"];
+        id after = initial[@"cursors"][@"after"];
+        if ((after != nil) && (after != (id)[NSNull null])) {
+            [self performSpotifyTokenRequest:@[create(after)] withCompletionHandler:weakInitialCompletion andFailure:failure];
+        } else {
+            finalCompletion(total.copy);
+        }
+
+    };
+    
+    [self performSpotifyTokenRequest:@[create(nil)] withCompletionHandler:weakInitialCompletion andFailure:failure];
 }
 
 - (void)performSpotifyToken:(NSString *)code completionHandler:(dispatch_block_t)completion andFailure:(void (^)(NSError *error))failure {
