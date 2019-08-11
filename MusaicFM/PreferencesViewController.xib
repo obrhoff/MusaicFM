@@ -18,6 +18,8 @@
                 <outlet property="lastFmWeeklyButton" destination="IMc-ag-Xl2" id="oHc-kS-zLn"/>
                 <outlet property="rowButton" destination="r9l-At-XyO" id="Q0a-hU-r8r"/>
                 <outlet property="settingsView" destination="big-rp-T7A" id="4EJ-dm-OGU"/>
+                <outlet property="spotifyArtists" destination="PyT-P7-qeY" id="Bgg-9h-JLt"/>
+                <outlet property="spotifyFavoriteSongs" destination="SNV-nA-jNn" id="zsR-qX-GKF"/>
                 <outlet property="spotifyNewRadio" destination="puy-di-hME" id="WoH-fw-BCd"/>
                 <outlet property="spotifySignIn" destination="LzT-bl-40q" id="qvE-ya-q1N"/>
                 <outlet property="spotifyUserRadio" destination="WKy-gZ-pTl" id="cgg-J8-xTA"/>
@@ -29,14 +31,14 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="673" height="415"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="contentRect" x="196" y="240" width="792" height="674"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="673" height="415"/>
+                <rect key="frame" x="0.0" y="0.0" width="792" height="674"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <webView hidden="YES" maintainsBackForwardList="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m05-OP-Omr">
-                        <rect key="frame" x="10" y="61" width="653" height="471"/>
+                        <rect key="frame" x="10" y="61" width="772" height="593"/>
                         <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0" plugInsEnabled="NO" javaEnabled="NO" javaScriptCanOpenWindowsAutomatically="NO" allowsAnimatedImages="NO" allowsAnimatedImageLooping="NO">
                             <nil key="identifier"/>
                         </webPreferences>
@@ -46,26 +48,26 @@
                         </connections>
                     </webView>
                     <view translatesAutoresizingMaskIntoConstraints="NO" id="big-rp-T7A" userLabel="SettingsView">
-                        <rect key="frame" x="10" y="61" width="653" height="471"/>
+                        <rect key="frame" x="10" y="61" width="772" height="593"/>
                         <subviews>
                             <stackView distribution="fillEqually" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mWR-V0-KRw">
-                                <rect key="frame" x="0.0" y="10" width="653" height="461"/>
+                                <rect key="frame" x="0.0" y="10" width="772" height="583"/>
                                 <subviews>
                                     <stackView verifyAmbiguity="off" distribution="fill" orientation="vertical" alignment="centerX" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D5v-Wb-Qgk" userLabel="Generel StackView">
-                                        <rect key="frame" x="0.0" y="255" width="204" height="206"/>
+                                        <rect key="frame" x="0.0" y="377" width="243" height="206"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pPx-Xn-ben" userLabel="Logo">
-                                                <rect key="frame" x="26" y="136" width="153" height="70"/>
+                                                <rect key="frame" x="45" y="136" width="153" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="ZW7-l8-QJy"/>
                                                 </constraints>
                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="generel" id="bdi-mA-ksl"/>
                                             </imageView>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="KEV-dm-VAw">
-                                                <rect key="frame" x="0.0" y="0.0" width="204" height="126"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="243" height="126"/>
                                                 <subviews>
                                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="r9l-At-XyO">
-                                                        <rect key="frame" x="18" y="65" width="169" height="25"/>
+                                                        <rect key="frame" x="18" y="65" width="208" height="26"/>
                                                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="hLz-PY-Wzy">
                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="menu"/>
@@ -73,7 +75,7 @@
                                                         </popUpButtonCell>
                                                     </popUpButton>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-0S-7NJ">
-                                                        <rect key="frame" x="18" y="99" width="168" height="17"/>
+                                                        <rect key="frame" x="18" y="99" width="207" height="17"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Rows" id="EMN-10-4ed">
                                                             <font key="font" metaFont="systemBold"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -81,7 +83,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arw-UQ-7m9">
-                                                        <rect key="frame" x="18" y="41" width="168" height="17"/>
+                                                        <rect key="frame" x="18" y="41" width="207" height="17"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Delay" id="nSY-ur-4WC">
                                                             <font key="font" metaFont="systemBold"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -89,7 +91,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="V1s-6O-amI">
-                                                        <rect key="frame" x="18" y="7" width="169" height="25"/>
+                                                        <rect key="frame" x="18" y="7" width="208" height="26"/>
                                                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" id="rIG-6T-kcM">
                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="menu"/>
@@ -128,26 +130,26 @@
                                         </customSpacing>
                                     </stackView>
                                     <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="M6T-TK-usZ">
-                                        <rect key="frame" x="210" y="20" width="9" height="421"/>
+                                        <rect key="frame" x="249" y="20" width="9" height="543"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="5" id="sWK-XV-lPy"/>
                                         </constraints>
                                     </box>
                                     <stackView verifyAmbiguity="off" distribution="fill" orientation="vertical" alignment="centerX" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B7y-rh-8eu" userLabel="LastFM StackView">
-                                        <rect key="frame" x="225" y="181" width="204" height="280"/>
+                                        <rect key="frame" x="264" y="303" width="244" height="280"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AZ8-iV-HIa" userLabel="Logo">
-                                                <rect key="frame" x="31" y="210" width="142" height="70"/>
+                                                <rect key="frame" x="51" y="210" width="142" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="bCs-SN-JR1"/>
                                                 </constraints>
                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="lastfm" id="W8v-Rw-Xxr"/>
                                             </imageView>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="5GE-jQ-RlL">
-                                                <rect key="frame" x="0.0" y="76" width="204" height="124"/>
+                                                <rect key="frame" x="0.0" y="76" width="244" height="124"/>
                                                 <subviews>
                                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="ePH-fH-qW6">
-                                                        <rect key="frame" x="8" y="98" width="188" height="18"/>
+                                                        <rect key="frame" x="8" y="98" width="228" height="18"/>
                                                         <buttonCell key="cell" type="check" title="User Albums" bezelStyle="regularSquare" imagePosition="left" inset="2" id="944-zA-vnI">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
@@ -157,7 +159,7 @@
                                                         </connections>
                                                     </button>
                                                     <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWc-AI-kxQ">
-                                                        <rect key="frame" x="10" y="68" width="184" height="22"/>
+                                                        <rect key="frame" x="10" y="68" width="224" height="22"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Last.fm Username" bezelStyle="round" id="Y4f-xX-yb9">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -165,7 +167,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAp-bf-WXj">
-                                                        <rect key="frame" x="8" y="41" width="188" height="17"/>
+                                                        <rect key="frame" x="8" y="41" width="228" height="17"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Weekly" id="WER-ru-wWR">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -173,7 +175,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IMc-ag-Xl2">
-                                                        <rect key="frame" x="8" y="7" width="189" height="25"/>
+                                                        <rect key="frame" x="8" y="7" width="229" height="26"/>
                                                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="cir-4s-Fvz">
                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="menu"/>
@@ -198,10 +200,10 @@
                                                 </constraints>
                                             </customView>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="3u7-NR-w3m">
-                                                <rect key="frame" x="0.0" y="0.0" width="204" height="66"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="244" height="66"/>
                                                 <subviews>
                                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="bdn-K7-F4H">
-                                                        <rect key="frame" x="8" y="40" width="188" height="18"/>
+                                                        <rect key="frame" x="8" y="40" width="228" height="18"/>
                                                         <buttonCell key="cell" type="check" title="Tags" bezelStyle="regularSquare" imagePosition="left" inset="2" id="S4U-KU-9qs">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
@@ -211,7 +213,7 @@
                                                         </connections>
                                                     </button>
                                                     <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tTz-rb-UGb">
-                                                        <rect key="frame" x="10" y="10" width="184" height="22"/>
+                                                        <rect key="frame" x="10" y="10" width="224" height="22"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Tag" bezelStyle="round" id="DGZ-S4-vYT">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -248,36 +250,36 @@
                                         </customSpacing>
                                     </stackView>
                                     <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="hvV-HX-aUJ">
-                                        <rect key="frame" x="435" y="20" width="9" height="421"/>
+                                        <rect key="frame" x="514" y="20" width="9" height="543"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="5" id="c43-iH-vEJ"/>
                                         </constraints>
                                     </box>
                                     <stackView verifyAmbiguity="off" distribution="fill" orientation="vertical" alignment="centerX" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arS-9m-cpn" userLabel="Spotify StackView">
-                                        <rect key="frame" x="450" y="292" width="203" height="169"/>
+                                        <rect key="frame" x="529" y="366" width="243" height="217"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pg9-F9-Qhh" userLabel="Logo">
-                                                <rect key="frame" x="26" y="99" width="151" height="70"/>
+                                                <rect key="frame" x="46" y="147" width="151" height="70"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="DV2-bs-VPB"/>
                                                 </constraints>
                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="spotify" id="nUP-6h-PjP"/>
                                             </imageView>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="EDg-BR-Dy4">
-                                                <rect key="frame" x="0.0" y="31" width="203" height="58"/>
+                                                <rect key="frame" x="0.0" y="31" width="243" height="106"/>
                                                 <subviews>
-                                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="WKy-gZ-pTl">
-                                                        <rect key="frame" x="8" y="32" width="187" height="18"/>
-                                                        <buttonCell key="cell" type="check" title="Saved Albums" bezelStyle="regularSquare" imagePosition="left" inset="2" id="WUW-ut-tyC">
+                                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="SNV-nA-jNn">
+                                                        <rect key="frame" x="8" y="80" width="227" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Liked Songs" bezelStyle="regularSquare" imagePosition="left" inset="2" id="IEi-Ni-834">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="didSelectRadio:" target="-2" id="B8G-tp-w3R"/>
+                                                            <action selector="didSelectRadio:" target="-2" id="eyw-sh-J2a"/>
                                                         </connections>
                                                     </button>
                                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="puy-di-hME">
-                                                        <rect key="frame" x="8" y="8" width="187" height="18"/>
+                                                        <rect key="frame" x="8" y="8" width="227" height="18"/>
                                                         <buttonCell key="cell" type="check" title="New Releases" bezelStyle="regularSquare" imagePosition="left" inset="2" id="1Ff-p6-hlQ">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
@@ -286,19 +288,46 @@
                                                             <action selector="didSelectRadio:" target="-2" id="Gf2-D1-xEs"/>
                                                         </connections>
                                                     </button>
+                                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="WKy-gZ-pTl">
+                                                        <rect key="frame" x="8" y="56" width="227" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Albums" bezelStyle="regularSquare" imagePosition="left" inset="2" id="WUW-ut-tyC">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="didSelectRadio:" target="-2" id="B8G-tp-w3R"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="PyT-P7-qeY">
+                                                        <rect key="frame" x="8" y="32" width="227" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Artists" bezelStyle="regularSquare" imagePosition="left" inset="2" id="jTf-oy-Q5k">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="didSelectRadio:" target="-2" id="7At-AW-dqy"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstItem="PyT-P7-qeY" firstAttribute="top" secondItem="WKy-gZ-pTl" secondAttribute="bottom" constant="10" id="3ye-RB-j3R"/>
                                                     <constraint firstItem="puy-di-hME" firstAttribute="leading" secondItem="EDg-BR-Dy4" secondAttribute="leading" constant="10" id="BhY-fh-e8L"/>
                                                     <constraint firstAttribute="trailing" secondItem="puy-di-hME" secondAttribute="trailing" constant="10" id="EJi-7e-9q2"/>
                                                     <constraint firstAttribute="trailing" secondItem="WKy-gZ-pTl" secondAttribute="trailing" constant="10" id="LfI-cr-fLi"/>
-                                                    <constraint firstItem="WKy-gZ-pTl" firstAttribute="top" secondItem="EDg-BR-Dy4" secondAttribute="top" constant="10" id="b2V-Iz-H9p"/>
+                                                    <constraint firstItem="WKy-gZ-pTl" firstAttribute="top" secondItem="SNV-nA-jNn" secondAttribute="bottom" constant="10" id="R6m-Eq-viv"/>
+                                                    <constraint firstAttribute="trailing" secondItem="PyT-P7-qeY" secondAttribute="trailing" constant="10" id="RYB-Rz-8rB"/>
+                                                    <constraint firstItem="PyT-P7-qeY" firstAttribute="leading" secondItem="EDg-BR-Dy4" secondAttribute="leading" constant="10" id="Xz6-VF-jTe"/>
+                                                    <constraint firstItem="SNV-nA-jNn" firstAttribute="top" secondItem="EDg-BR-Dy4" secondAttribute="top" constant="10" id="Ydn-Jt-lDk"/>
                                                     <constraint firstAttribute="bottom" secondItem="puy-di-hME" secondAttribute="bottom" constant="10" id="dYW-zz-5Vm"/>
-                                                    <constraint firstItem="puy-di-hME" firstAttribute="top" secondItem="WKy-gZ-pTl" secondAttribute="bottom" constant="10" id="fB1-zm-FyO"/>
                                                     <constraint firstItem="WKy-gZ-pTl" firstAttribute="leading" secondItem="EDg-BR-Dy4" secondAttribute="leading" constant="10" id="gKW-45-IJH"/>
+                                                    <constraint firstItem="SNV-nA-jNn" firstAttribute="leading" secondItem="EDg-BR-Dy4" secondAttribute="leading" constant="10" id="hnM-E3-LVT"/>
+                                                    <constraint firstItem="PyT-P7-qeY" firstAttribute="top" secondItem="WKy-gZ-pTl" secondAttribute="bottom" constant="10" id="m7K-0L-m8H"/>
+                                                    <constraint firstItem="puy-di-hME" firstAttribute="top" secondItem="PyT-P7-qeY" secondAttribute="bottom" constant="10" id="rT1-52-95i"/>
+                                                    <constraint firstAttribute="trailing" secondItem="SNV-nA-jNn" secondAttribute="trailing" constant="10" id="skT-Vr-9bK"/>
                                                 </constraints>
                                             </customView>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LzT-bl-40q" userLabel="Login">
-                                                <rect key="frame" x="61" y="-7" width="82" height="32"/>
+                                                <rect key="frame" x="81" y="-7" width="82" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Sign In" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kHB-mP-CA7">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
@@ -354,7 +383,7 @@
                         </constraints>
                     </view>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bsm-ai-r8D">
-                        <rect key="frame" x="301" y="13" width="72" height="32"/>
+                        <rect key="frame" x="360" y="13" width="72" height="32"/>
                         <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IKi-NS-HF6">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -377,7 +406,7 @@
                     <constraint firstAttribute="trailing" secondItem="big-rp-T7A" secondAttribute="trailing" constant="10" id="yQJ-p5-5f9"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="217.5" y="207.5"/>
+            <point key="canvasLocation" x="-480" y="-542"/>
         </window>
     </objects>
     <resources>
