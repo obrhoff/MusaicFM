@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="15400"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -32,21 +32,21 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="792" height="674"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="792" height="674"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <webView hidden="YES" maintainsBackForwardList="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m05-OP-Omr">
+                    <wkWebView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m05-OP-Omr">
                         <rect key="frame" x="10" y="61" width="772" height="593"/>
-                        <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0" plugInsEnabled="NO" javaEnabled="NO" javaScriptCanOpenWindowsAutomatically="NO" allowsAnimatedImages="NO" allowsAnimatedImageLooping="NO">
-                            <nil key="identifier"/>
-                        </webPreferences>
+                        <wkWebViewConfiguration key="configuration">
+                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                            <wkPreferences key="preferences"/>
+                        </wkWebViewConfiguration>
                         <connections>
-                            <outlet property="frameLoadDelegate" destination="-2" id="Mir-GF-4Li"/>
-                            <outlet property="policyDelegate" destination="-2" id="MX1-5a-qP0"/>
+                            <outlet property="navigationDelegate" destination="-2" id="WVT-zL-xWe"/>
                         </connections>
-                    </webView>
+                    </wkWebView>
                     <view translatesAutoresizingMaskIntoConstraints="NO" id="big-rp-T7A" userLabel="SettingsView">
                         <rect key="frame" x="10" y="61" width="772" height="593"/>
                         <subviews>
@@ -67,15 +67,15 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="243" height="126"/>
                                                 <subviews>
                                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="r9l-At-XyO">
-                                                        <rect key="frame" x="18" y="65" width="208" height="26"/>
+                                                        <rect key="frame" x="18" y="64" width="208" height="27"/>
                                                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="hLz-PY-Wzy">
                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="menu"/>
+                                                            <font key="font" metaFont="system"/>
                                                             <menu key="menu" id="Rpp-R5-5B7"/>
                                                         </popUpButtonCell>
                                                     </popUpButton>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-0S-7NJ">
-                                                        <rect key="frame" x="18" y="99" width="207" height="17"/>
+                                                        <rect key="frame" x="18" y="100" width="207" height="16"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Rows" id="EMN-10-4ed">
                                                             <font key="font" metaFont="systemBold"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -83,7 +83,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arw-UQ-7m9">
-                                                        <rect key="frame" x="18" y="41" width="207" height="17"/>
+                                                        <rect key="frame" x="18" y="41" width="207" height="16"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Delay" id="nSY-ur-4WC">
                                                             <font key="font" metaFont="systemBold"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -91,10 +91,10 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="V1s-6O-amI">
-                                                        <rect key="frame" x="18" y="7" width="208" height="26"/>
+                                                        <rect key="frame" x="18" y="7" width="208" height="25"/>
                                                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" id="rIG-6T-kcM">
                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="menu"/>
+                                                            <font key="font" metaFont="system"/>
                                                             <menu key="menu" autoenablesItems="NO" id="eg9-Py-PCV"/>
                                                         </popUpButtonCell>
                                                     </popUpButton>
@@ -149,7 +149,7 @@
                                                 <rect key="frame" x="0.0" y="76" width="244" height="124"/>
                                                 <subviews>
                                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="ePH-fH-qW6">
-                                                        <rect key="frame" x="8" y="98" width="228" height="18"/>
+                                                        <rect key="frame" x="8" y="97" width="228" height="19"/>
                                                         <buttonCell key="cell" type="check" title="User Albums" bezelStyle="regularSquare" imagePosition="left" inset="2" id="944-zA-vnI">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
@@ -159,7 +159,7 @@
                                                         </connections>
                                                     </button>
                                                     <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWc-AI-kxQ">
-                                                        <rect key="frame" x="10" y="68" width="224" height="22"/>
+                                                        <rect key="frame" x="10" y="67" width="224" height="22"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Last.fm Username" bezelStyle="round" id="Y4f-xX-yb9">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -167,7 +167,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAp-bf-WXj">
-                                                        <rect key="frame" x="8" y="41" width="228" height="17"/>
+                                                        <rect key="frame" x="8" y="41" width="228" height="16"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Weekly" id="WER-ru-wWR">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -175,10 +175,10 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IMc-ag-Xl2">
-                                                        <rect key="frame" x="8" y="7" width="229" height="26"/>
+                                                        <rect key="frame" x="8" y="7" width="229" height="25"/>
                                                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="cir-4s-Fvz">
                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="menu"/>
+                                                            <font key="font" metaFont="system"/>
                                                             <menu key="menu" id="S23-ON-CmK"/>
                                                         </popUpButtonCell>
                                                     </popUpButton>

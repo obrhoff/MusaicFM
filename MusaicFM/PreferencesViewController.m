@@ -17,7 +17,7 @@
 #import "Constants.h"
 #import "Factory.h"
 
-@interface PreferencesViewController () <WebFrameLoadDelegate, WebPolicyDelegate>
+@interface PreferencesViewController () <WKNavigationDelegate>
 
 @property (nonatomic, readwrite, weak) IBOutlet NSButton *doneButton;
 @property (nonatomic, readwrite, weak) IBOutlet NSPopUpButton *rowButton;
@@ -36,7 +36,7 @@
 
 @property (nonatomic, readwrite, weak) IBOutlet NSPopUpButton *lastFmWeeklyButton;
 
-@property (nonatomic, readwrite, weak) IBOutlet WebView *webView;
+@property (nonatomic, readwrite, weak) IBOutlet WKWebView *webView;
 @property (nonatomic, readwrite, weak) IBOutlet NSView *settingsView;
 @property (nonatomic, readwrite, weak) IBOutlet NSView *containerView;
 
@@ -122,7 +122,8 @@
     else {
         self.webView.hidden = NO;
         self.settingsView.hidden = YES;
-        [self.webView.mainFrame loadRequest:[NSURLRequest requestWithURL:[Factory spotifyAuthentification].URL]];
+        NSURLRequest *request = [NSURLRequest requestWithURL:[Factory spotifyAuthentification].URL];
+        [self.webView loadRequest:request];
     }
 }
 
@@ -152,30 +153,32 @@
     return @"PreferencesViewController";
 }
 
-- (void)webView:(WebView *)webView decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request
-          frame:(WebFrame *)frame decisionListener:(id<WebPolicyDecisionListener>)listener {
-    NSURLComponents *components = [NSURLComponents componentsWithURL:request.URL resolvingAgainstBaseURL:NO];
-    NSURLComponents *callbackComponents = [NSURLComponents componentsWithString:spotifyRedirectUrl];
+-(void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     
-    if (![components.scheme isEqualToString:callbackComponents.scheme]) {
-        [listener use];
-        return;
-    }
-    
-    NSPredicate *filter = [NSPredicate predicateWithFormat:@"name == %@", @"code"];
-    NSString *code = [[components.queryItems filteredArrayUsingPredicate:filter].firstObject value];
-    typeof(self) weakSelf = self;
-    dispatch_block_t dismiss = ^{
-        [weakSelf configure];
-    };
-    if (!code.length) {
-        dismiss();
-        return;
-    }
-    [self.manager performSpotifyToken:code completionHandler:dismiss andFailure:^(NSError *error) {
-        dismiss();
-    }];
-}
+    NSURLComponents *components = [NSURLComponents componentsWithURL:webView.URL resolvingAgainstBaseURL:NO];
+     NSURLComponents *callbackComponents = [NSURLComponents componentsWithString:spotifyRedirectUrl];
 
+     if (![components.scheme isEqualToString:callbackComponents.scheme]) {
+         decisionHandler(WKNavigationActionPolicyAllow);
+         return;
+     }
+
+     NSPredicate *filter = [NSPredicate predicateWithFormat:@"name == %@", @"code"];
+     NSString *code = [[components.queryItems filteredArrayUsingPredicate:filter].firstObject value];
+     typeof(self) weakSelf = self;
+    
+     dispatch_block_t dismiss = ^{
+         [weakSelf configure];
+         decisionHandler(WKNavigationActionPolicyCancel);
+     };
+     if (!code.length) {
+         dismiss();
+         return;
+     }
+     [self.manager performSpotifyToken:code completionHandler:dismiss andFailure:^(NSError *error) {
+         dismiss();
+     }];
+    
+}
 
 @end
