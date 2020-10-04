@@ -10,7 +10,8 @@
 
 @implementation Artwork
 
-- (instancetype)initWithCoder:(NSCoder *)decoder {
+- (instancetype)initWithCoder:(NSCoder*)decoder
+{
     self = [super init];
     if (self) {
         self.url = [decoder decodeObjectForKey:@"url"];
@@ -21,18 +22,20 @@
     return self;
 }
 
-- (void)encodeWithCoder:(NSCoder *)encoder {
+- (void)encodeWithCoder:(NSCoder*)encoder
+{
     [encoder encodeObject:self.url forKey:@"url"];
     [encoder encodeObject:self.artworkUrl forKey:@"artworkUrl"];
     [encoder encodeObject:self.album forKey:@"album"];
     [encoder encodeObject:self.artist forKey:@"artist"];
 }
 
-- (BOOL)isEqual:(id)object {
+- (BOOL)isEqual:(id)object
+{
     if (![object isKindOfClass:[self class]]) {
         return NO;
     }
-    Artwork *compare = object;
+    Artwork* compare = object;
     return [compare.artworkUrl isEqual:self.artworkUrl];
 }
 

@@ -20,15 +20,10 @@ typedef NS_ENUM (NSUInteger, Weekly) {
 
 @interface Manager : NSObject
 
-@property (nonatomic, readwrite, strong)Preferences * preferences;
-
-
 - (void)performSpotifyUserAlbums:(void (^)(NSArray *items)) completion andFailure:(void (^)(NSError *error))failure;
 - (void)performSpotifyReleases:(void (^)(NSArray *items)) completion andFailure:(void (^)(NSError *error))failure;
 - (void)performSpotifyLikedSongs:(void (^)(NSArray *items)) completion andFailure:(void (^)(NSError *error))failure;
-- (void)performSpotifyArtists:(void (^)(NSArray *items)) completion andFailure:(void (^)(NSError *error))failure;
 - (void)performSpotifyToken:(NSString *)code completionHandler:(dispatch_block_t)completion andFailure:(void (^)(NSError *error))failure;
-
 - (void)performLastfmTag:(void (^)(NSArray *items)) completion andFailure:(void (^)(NSError *error))failure;
 - (void)performLastfmWeekly:(void (^)(NSArray *items)) completion andFailure:(void (^)(NSError *error))failure;
 

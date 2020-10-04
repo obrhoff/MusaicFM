@@ -3,14 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08413D7CBB6FF19716237235 /* libPods-MusaicFM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B3289E9295C5A6063DB3F2 /* libPods-MusaicFM.a */; };
 		79F4836421DBBEFB00F24553 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D32D811DF2A86E0013574C /* Factory.m */; };
+		95377F48252647A600BE5A63 /* MusaicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E149F9961DD8C6F600D9E39F /* MusaicItem.m */; };
+		95377F4B252647AB00BE5A63 /* MusaicFMView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CF259E1DD7D8D500441255 /* MusaicFMView.m */; };
+		95377F58252648E600BE5A63 /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E140AB032281B1C600748BA2 /* thumbnail@2x.png */; };
+		95377F59252648E600BE5A63 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = E140AB022281B1C600748BA2 /* thumbnail.png */; };
+		95377F5C2526490300BE5A63 /* MusaicItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1472E471DD8CAE70007E945 /* MusaicItem.xib */; };
+		9538326B2528E7BE006B0F81 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9538326E2528E7BE006B0F81 /* Localizable.strings */; };
+		9538326C2528E7BE006B0F81 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9538326E2528E7BE006B0F81 /* Localizable.strings */; };
+		9538327F2528F459006B0F81 /* PreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9538327E2528F459006B0F81 /* PreferencesViewController.xib */; };
+		953832802528F459006B0F81 /* PreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9538327E2528F459006B0F81 /* PreferencesViewController.xib */; };
+		953832872528F88B006B0F81 /* NSBundle+Bundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 953832852528F88B006B0F81 /* NSBundle+Bundle.h */; };
+		953832882528F88B006B0F81 /* NSBundle+Bundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 953832862528F88B006B0F81 /* NSBundle+Bundle.m */; };
+		953832892528F88B006B0F81 /* NSBundle+Bundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 953832862528F88B006B0F81 /* NSBundle+Bundle.m */; };
+		95A5CA852527569F00F9EA50 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95A5CA842527569F00F9EA50 /* Media.xcassets */; };
+		95A5CA862527569F00F9EA50 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95A5CA842527569F00F9EA50 /* Media.xcassets */; };
 		E12275D31DDE5E8400EDC382 /* Artwork.m in Sources */ = {isa = PBXBuildFile; fileRef = E149F98A1DD8C17100D9E39F /* Artwork.m */; };
-		E129C5331DD900A300F93950 /* PreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E129C5321DD900A300F93950 /* PreferencesViewController.xib */; };
 		E129C5361DD9020300F93950 /* PreferencesViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E129C5341DD9020300F93950 /* PreferencesViewController.h */; };
 		E129C5371DD9020300F93950 /* PreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E129C5351DD9020300F93950 /* PreferencesViewController.m */; };
 		E13191BB1DE1C4CA005EFA47 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13191BA1DE1C4CA005EFA47 /* WebKit.framework */; };
@@ -38,36 +50,27 @@
 		E149F9901DD8C26C00D9E39F /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = E149F98E1DD8C26C00D9E39F /* Manager.m */; };
 		E149F9981DD8C6F600D9E39F /* MusaicItem.h in Headers */ = {isa = PBXBuildFile; fileRef = E149F9951DD8C6F600D9E39F /* MusaicItem.h */; };
 		E149F9991DD8C6F600D9E39F /* MusaicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E149F9961DD8C6F600D9E39F /* MusaicItem.m */; };
-		E19BE1FA1DD8F511003C0DB2 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = E19BE1F91DD8F511003C0DB2 /* placeholder.png */; };
+		E1C725D32528AB6100FE944D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = E1C725D22528AB6100FE944D /* SDWebImage */; };
+		E1C725D92528AC7300FE944D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = E1C725D82528AC7300FE944D /* SDWebImage */; };
 		E1CF259D1DD7D8D500441255 /* MusaicFMView.h in Headers */ = {isa = PBXBuildFile; fileRef = E1CF259C1DD7D8D500441255 /* MusaicFMView.h */; };
 		E1CF259F1DD7D8D500441255 /* MusaicFMView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CF259E1DD7D8D500441255 /* MusaicFMView.m */; };
 		E1D32D821DF2A86E0013574C /* Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = E1D32D801DF2A86E0013574C /* Factory.h */; };
 		E1D32D831DF2A86E0013574C /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D32D811DF2A86E0013574C /* Factory.m */; };
-		E1F291E81DE500E900EBA3F8 /* general@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E21DE500E900EBA3F8 /* general@2x.png */; };
-		E1F291E91DE500E900EBA3F8 /* general@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E21DE500E900EBA3F8 /* general@2x.png */; };
-		E1F291EA1DE500E900EBA3F8 /* generel.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E31DE500E900EBA3F8 /* generel.png */; };
-		E1F291EB1DE500E900EBA3F8 /* generel.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E31DE500E900EBA3F8 /* generel.png */; };
-		E1F291EC1DE500E900EBA3F8 /* lastfm.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E41DE500E900EBA3F8 /* lastfm.png */; };
-		E1F291ED1DE500E900EBA3F8 /* lastfm.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E41DE500E900EBA3F8 /* lastfm.png */; };
-		E1F291EE1DE500E900EBA3F8 /* lastfm2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E51DE500E900EBA3F8 /* lastfm2x.png */; };
-		E1F291EF1DE500E900EBA3F8 /* lastfm2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E51DE500E900EBA3F8 /* lastfm2x.png */; };
-		E1F291F01DE500E900EBA3F8 /* spotify.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E61DE500E900EBA3F8 /* spotify.png */; };
-		E1F291F11DE500E900EBA3F8 /* spotify.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E61DE500E900EBA3F8 /* spotify.png */; };
-		E1F291F21DE500E900EBA3F8 /* spotify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E71DE500E900EBA3F8 /* spotify@2x.png */; };
-		E1F291F31DE500E900EBA3F8 /* spotify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F291E71DE500E900EBA3F8 /* spotify@2x.png */; };
 		E1FA396C1DDA3FBE00186BE2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FA396B1DDA3FBE00186BE2 /* AppDelegate.m */; };
 		E1FA396F1DDA3FBE00186BE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FA396E1DDA3FBE00186BE2 /* main.m */; };
 		E1FA39711DDA3FBE00186BE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1FA39701DDA3FBE00186BE2 /* Assets.xcassets */; };
 		E1FA39741DDA3FBE00186BE2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1FA39721DDA3FBE00186BE2 /* MainMenu.xib */; };
-		E1FA39791DDA3FF300186BE2 /* PreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E129C5321DD900A300F93950 /* PreferencesViewController.xib */; };
 		E1FA397A1DDA3FF300186BE2 /* PreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E129C5351DD9020300F93950 /* PreferencesViewController.m */; };
 		E1FF4D9C2350B9BA00B89371 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13191BA1DE1C4CA005EFA47 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		37B8A63297434C87281E7520 /* Pods-MusaicFM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusaicFM.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusaicFM/Pods-MusaicFM.release.xcconfig"; sourceTree = "<group>"; };
-		C7FEC3508F55C0BA200D3BC0 /* Pods-MusaicFM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusaicFM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusaicFM/Pods-MusaicFM.debug.xcconfig"; sourceTree = "<group>"; };
-		E129C5321DD900A300F93950 /* PreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesViewController.xib; sourceTree = "<group>"; };
+		9538326D2528E7BE006B0F81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		953832712528E7D4006B0F81 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9538327E2528F459006B0F81 /* PreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesViewController.xib; sourceTree = "<group>"; };
+		953832852528F88B006B0F81 /* NSBundle+Bundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Bundle.h"; sourceTree = "<group>"; };
+		953832862528F88B006B0F81 /* NSBundle+Bundle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Bundle.m"; sourceTree = "<group>"; };
+		95A5CA842527569F00F9EA50 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		E129C5341DD9020300F93950 /* PreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesViewController.h; sourceTree = "<group>"; };
 		E129C5351DD9020300F93950 /* PreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesViewController.m; sourceTree = "<group>"; };
 		E13191BA1DE1C4CA005EFA47 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -90,19 +93,12 @@
 		E149F98E1DD8C26C00D9E39F /* Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
 		E149F9951DD8C6F600D9E39F /* MusaicItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusaicItem.h; sourceTree = "<group>"; };
 		E149F9961DD8C6F600D9E39F /* MusaicItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusaicItem.m; sourceTree = "<group>"; };
-		E19BE1F91DD8F511003C0DB2 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		E1CF25991DD7D8D500441255 /* MusaicFM.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusaicFM.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CF259C1DD7D8D500441255 /* MusaicFMView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusaicFMView.h; sourceTree = "<group>"; };
 		E1CF259E1DD7D8D500441255 /* MusaicFMView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusaicFMView.m; sourceTree = "<group>"; };
 		E1CF25A01DD7D8D500441255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1D32D801DF2A86E0013574C /* Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Factory.h; sourceTree = "<group>"; };
 		E1D32D811DF2A86E0013574C /* Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Factory.m; sourceTree = "<group>"; };
-		E1F291E21DE500E900EBA3F8 /* general@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "general@2x.png"; sourceTree = "<group>"; };
-		E1F291E31DE500E900EBA3F8 /* generel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = generel.png; sourceTree = "<group>"; };
-		E1F291E41DE500E900EBA3F8 /* lastfm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lastfm.png; sourceTree = "<group>"; };
-		E1F291E51DE500E900EBA3F8 /* lastfm2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lastfm2x.png; sourceTree = "<group>"; };
-		E1F291E61DE500E900EBA3F8 /* spotify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spotify.png; sourceTree = "<group>"; };
-		E1F291E71DE500E900EBA3F8 /* spotify@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spotify@2x.png"; sourceTree = "<group>"; };
 		E1FA39681DDA3FBE00186BE2 /* MusaicFMPreferences.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusaicFMPreferences.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1FA396A1DDA3FBE00186BE2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1FA396B1DDA3FBE00186BE2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -110,7 +106,6 @@
 		E1FA39701DDA3FBE00186BE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1FA39731DDA3FBE00186BE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E1FA39751DDA3FBE00186BE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9B3289E9295C5A6063DB3F2 /* libPods-MusaicFM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusaicFM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +116,7 @@
 				E1472E541DD8D1C70007E945 /* Foundation.framework in Frameworks */,
 				E1472E521DD8D1C10007E945 /* Cocoa.framework in Frameworks */,
 				E1FF4D9C2350B9BA00B89371 /* WebKit.framework in Frameworks */,
-				08413D7CBB6FF19716237235 /* libPods-MusaicFM.a in Frameworks */,
+				E1C725D32528AB6100FE944D /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1C725D92528AC7300FE944D /* SDWebImage in Frameworks */,
 				E13191BB1DE1C4CA005EFA47 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,28 +132,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B60AFEB1108005ABD06797A2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C7FEC3508F55C0BA200D3BC0 /* Pods-MusaicFM.debug.xcconfig */,
-				37B8A63297434C87281E7520 /* Pods-MusaicFM.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		E11237F81DE50578005E6D06 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				E140AB022281B1C600748BA2 /* thumbnail.png */,
 				E140AB032281B1C600748BA2 /* thumbnail@2x.png */,
 				E1CF25A01DD7D8D500441255 /* Info.plist */,
-				E19BE1F91DD8F511003C0DB2 /* placeholder.png */,
-				E1F291E21DE500E900EBA3F8 /* general@2x.png */,
-				E1F291E31DE500E900EBA3F8 /* generel.png */,
-				E1F291E41DE500E900EBA3F8 /* lastfm.png */,
-				E1F291E51DE500E900EBA3F8 /* lastfm2x.png */,
-				E1F291E61DE500E900EBA3F8 /* spotify.png */,
-				E1F291E71DE500E900EBA3F8 /* spotify@2x.png */,
+				95A5CA842527569F00F9EA50 /* Media.xcassets */,
+				9538326E2528E7BE006B0F81 /* Localizable.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -169,6 +151,8 @@
 				E149F98A1DD8C17100D9E39F /* Artwork.m */,
 				E13191BC1DE1DA9B005EFA47 /* Constants.h */,
 				E13191BD1DE1DA9B005EFA47 /* Constants.m */,
+				E1D32D801DF2A86E0013574C /* Factory.h */,
+				E1D32D811DF2A86E0013574C /* Factory.m */,
 				E149F98D1DD8C26C00D9E39F /* Manager.h */,
 				E149F98E1DD8C26C00D9E39F /* Manager.m */,
 				E1CF259C1DD7D8D500441255 /* MusaicFMView.h */,
@@ -176,6 +160,8 @@
 				E149F9951DD8C6F600D9E39F /* MusaicItem.h */,
 				E149F9961DD8C6F600D9E39F /* MusaicItem.m */,
 				E1472E471DD8CAE70007E945 /* MusaicItem.xib */,
+				953832852528F88B006B0F81 /* NSBundle+Bundle.h */,
+				953832862528F88B006B0F81 /* NSBundle+Bundle.m */,
 				E1472E571DD8D45C0007E945 /* NSMutableArray+Shuffle.h */,
 				E1472E581DD8D45C0007E945 /* NSMutableArray+Shuffle.m */,
 				E1472E4B1DD8D0600007E945 /* Parser.h */,
@@ -184,9 +170,7 @@
 				E13E3F4C1DDA4B6F00128CBF /* Preferences.m */,
 				E129C5341DD9020300F93950 /* PreferencesViewController.h */,
 				E129C5351DD9020300F93950 /* PreferencesViewController.m */,
-				E129C5321DD900A300F93950 /* PreferencesViewController.xib */,
-				E1D32D801DF2A86E0013574C /* Factory.h */,
-				E1D32D811DF2A86E0013574C /* Factory.m */,
+				9538327E2528F459006B0F81 /* PreferencesViewController.xib */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -197,7 +181,6 @@
 				E13191BA1DE1C4CA005EFA47 /* WebKit.framework */,
 				E1472E531DD8D1C70007E945 /* Foundation.framework */,
 				E1472E511DD8D1C10007E945 /* Cocoa.framework */,
-				E9B3289E9295C5A6063DB3F2 /* libPods-MusaicFM.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,7 +192,6 @@
 				E1FA39691DDA3FBE00186BE2 /* MusaicFMPreferences */,
 				E1CF259A1DD7D8D500441255 /* Products */,
 				E1472E501DD8D1C10007E945 /* Frameworks */,
-				B60AFEB1108005ABD06797A2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -264,6 +246,7 @@
 				E129C5361DD9020300F93950 /* PreferencesViewController.h in Headers */,
 				E149F98B1DD8C17100D9E39F /* Artwork.h in Headers */,
 				E149F9981DD8C6F600D9E39F /* MusaicItem.h in Headers */,
+				953832872528F88B006B0F81 /* NSBundle+Bundle.h in Headers */,
 				E1D32D821DF2A86E0013574C /* Factory.h in Headers */,
 				E13191BE1DE1DA9B005EFA47 /* Constants.h in Headers */,
 				E13E3F4D1DDA4B6F00128CBF /* Preferences.h in Headers */,
@@ -279,7 +262,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1CF25A31DD7D8D500441255 /* Build configuration list for PBXNativeTarget "MusaicFM" */;
 			buildPhases = (
-				2CD44E79CD08C0EC1D215D30 /* [CP] Check Pods Manifest.lock */,
 				E1CF25941DD7D8D500441255 /* Sources */,
 				E1CF25951DD7D8D500441255 /* Frameworks */,
 				E1CF25961DD7D8D500441255 /* Headers */,
@@ -290,6 +272,9 @@
 			dependencies = (
 			);
 			name = MusaicFM;
+			packageProductDependencies = (
+				E1C725D22528AB6100FE944D /* SDWebImage */,
+			);
 			productName = MusaicFM;
 			productReference = E1CF25991DD7D8D500441255 /* MusaicFM.saver */;
 			productType = "com.apple.product-type.bundle";
@@ -307,6 +292,9 @@
 			dependencies = (
 			);
 			name = MusaicFMPreferences;
+			packageProductDependencies = (
+				E1C725D82528AC7300FE944D /* SDWebImage */,
+			);
 			productName = MusaicFMPreferences;
 			productReference = E1FA39681DDA3FBE00186BE2 /* MusaicFMPreferences.app */;
 			productType = "com.apple.product-type.application";
@@ -327,7 +315,6 @@
 					};
 					E1FA39671DDA3FBE00186BE2 = {
 						CreatedOnToolsVersion = 8.2;
-						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -339,8 +326,12 @@
 				English,
 				en,
 				Base,
+				de,
 			);
 			mainGroup = E1CF258F1DD7D8D500441255;
+			packageReferences = (
+				E1C725D12528AB6100FE944D /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = E1CF259A1DD7D8D500441255 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -356,16 +347,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E19BE1FA1DD8F511003C0DB2 /* placeholder.png in Resources */,
-				E1F291E81DE500E900EBA3F8 /* general@2x.png in Resources */,
+				95A5CA852527569F00F9EA50 /* Media.xcassets in Resources */,
+				9538327F2528F459006B0F81 /* PreferencesViewController.xib in Resources */,
 				E140AB052281B1C600748BA2 /* thumbnail@2x.png in Resources */,
-				E1F291EE1DE500E900EBA3F8 /* lastfm2x.png in Resources */,
-				E129C5331DD900A300F93950 /* PreferencesViewController.xib in Resources */,
 				E140AB042281B1C600748BA2 /* thumbnail.png in Resources */,
-				E1F291F21DE500E900EBA3F8 /* spotify@2x.png in Resources */,
-				E1F291F01DE500E900EBA3F8 /* spotify.png in Resources */,
-				E1F291EA1DE500E900EBA3F8 /* generel.png in Resources */,
-				E1F291EC1DE500E900EBA3F8 /* lastfm.png in Resources */,
+				9538326B2528E7BE006B0F81 /* Localizable.strings in Resources */,
 				E1472E4A1DD8CB7A0007E945 /* MusaicItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,39 +361,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1FA39711DDA3FBE00186BE2 /* Assets.xcassets in Resources */,
-				E1F291E91DE500E900EBA3F8 /* general@2x.png in Resources */,
-				E1F291EF1DE500E900EBA3F8 /* lastfm2x.png in Resources */,
 				E1FA39741DDA3FBE00186BE2 /* MainMenu.xib in Resources */,
-				E1F291F31DE500E900EBA3F8 /* spotify@2x.png in Resources */,
-				E1F291F11DE500E900EBA3F8 /* spotify.png in Resources */,
-				E1F291EB1DE500E900EBA3F8 /* generel.png in Resources */,
-				E1F291ED1DE500E900EBA3F8 /* lastfm.png in Resources */,
-				E1FA39791DDA3FF300186BE2 /* PreferencesViewController.xib in Resources */,
+				953832802528F459006B0F81 /* PreferencesViewController.xib in Resources */,
+				95377F58252648E600BE5A63 /* thumbnail@2x.png in Resources */,
+				95377F5C2526490300BE5A63 /* MusaicItem.xib in Resources */,
+				95377F59252648E600BE5A63 /* thumbnail.png in Resources */,
+				95A5CA862527569F00F9EA50 /* Media.xcassets in Resources */,
+				9538326C2528E7BE006B0F81 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2CD44E79CD08C0EC1D215D30 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MusaicFM-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E1CF25941DD7D8D500441255 /* Sources */ = {
@@ -415,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D32D831DF2A86E0013574C /* Factory.m in Sources */,
+				953832882528F88B006B0F81 /* NSBundle+Bundle.m in Sources */,
 				E149F9991DD8C6F600D9E39F /* MusaicItem.m in Sources */,
 				E1CF259F1DD7D8D500441255 /* MusaicFMView.m in Sources */,
 				E13E3F4E1DDA4B6F00128CBF /* Preferences.m in Sources */,
@@ -432,14 +397,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				79F4836421DBBEFB00F24553 /* Factory.m in Sources */,
+				95377F4B252647AB00BE5A63 /* MusaicFMView.m in Sources */,
 				E13191C51DE1DD26005EFA47 /* Parser.m in Sources */,
 				E1FA397A1DDA3FF300186BE2 /* PreferencesViewController.m in Sources */,
 				E13191C41DE1DD26005EFA47 /* NSMutableArray+Shuffle.m in Sources */,
 				E1FA396F1DDA3FBE00186BE2 /* main.m in Sources */,
 				E12275D31DDE5E8400EDC382 /* Artwork.m in Sources */,
 				E13E3F4F1DDA4B6F00128CBF /* Preferences.m in Sources */,
+				953832892528F88B006B0F81 /* NSBundle+Bundle.m in Sources */,
 				E1FA396C1DDA3FBE00186BE2 /* AppDelegate.m in Sources */,
 				E13191C01DE1DA9B005EFA47 /* Constants.m in Sources */,
+				95377F48252647A600BE5A63 /* MusaicItem.m in Sources */,
 				E13191C11DE1DD19005EFA47 /* Manager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,6 +415,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		9538326E2528E7BE006B0F81 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9538326D2528E7BE006B0F81 /* en */,
+				953832712528E7D4006B0F81 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		E1FA39721DDA3FBE00186BE2 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -549,36 +526,37 @@
 		};
 		E1CF25A41DD7D8D500441255 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7FEC3508F55C0BA200D3BC0 /* Pods-MusaicFM.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = YE33ZK7Z99;
 				INFOPLIST_FILE = MusaicFM/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.1.5;
+				MARKETING_VERSION = 1.1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.obrhoff.MusaicFM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
 		};
 		E1CF25A51DD7D8D500441255 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37B8A63297434C87281E7520 /* Pods-MusaicFM.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application: Dennis Oberhoff (YE33ZK7Z99)";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = YE33ZK7Z99;
 				INFOPLIST_FILE = MusaicFM/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.1.5;
+				MARKETING_VERSION = 1.1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.obrhoff.MusaicFM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;
@@ -593,7 +571,10 @@
 				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MusaicFMPreferences/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MARKETING_VERSION = 1.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.obrhoff.MusaicFMPreferences;
@@ -606,16 +587,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 8;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = YE33ZK7Z99;
 				INFOPLIST_FILE = MusaicFMPreferences/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MARKETING_VERSION = 1.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.obrhoff.MusaicFMPreferences;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -650,6 +636,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E1C725D12528AB6100FE944D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E1C725D22528AB6100FE944D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1C725D12528AB6100FE944D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		E1C725D82528AC7300FE944D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1C725D12528AB6100FE944D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E1CF25901DD7D8D500441255 /* Project object */;
 }

@@ -12,7 +12,8 @@
 
 @implementation Preferences
 
-- (instancetype)init {
+- (instancetype)init
+{
     self = [super init];
     if (self) {
         self.rows = 4;
@@ -23,7 +24,8 @@
     return self;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)decoder {
+- (instancetype)initWithCoder:(NSCoder*)decoder
+{
     self = [super init];
     if (self) {
         self.lastfmUser = [decoder decodeObjectForKey:@"lastfmUser"];
@@ -40,7 +42,8 @@
     return self;
 }
 
-- (void)encodeWithCoder:(NSCoder *)encoder {
+- (void)encodeWithCoder:(NSCoder*)encoder
+{
     [encoder encodeInteger:self.mode forKey:@"mode"];
     [encoder encodeObject:self.artworks forKey:@"artworks"];
     [encoder encodeObject:self.lastfmUser forKey:@"lastfmUser"];
@@ -53,22 +56,33 @@
     [encoder encodeInteger:self.lastfmWeekly forKey:@"lastfmWeekly"];
 }
 
-- (void)clear {
-    self.artworks = nil;
+- (void)clear
+{
+    self.spotifyToken = nil;
+    self.spotifyRefresh = nil;
+    self.spotifyCode = nil;
 }
 
-- (void)synchronize {
-    ScreenSaverDefaults *defaults = [ScreenSaverDefaults defaultsForModuleWithName:@"com.obrhoff.musaicfm.pref"];
-    NSData *stored = [NSKeyedArchiver archivedDataWithRootObject:self];
-    [defaults setObject:stored forKey:@"preferences"];
+- (void)synchronize
+{
+    ScreenSaverDefaults* defaults = [ScreenSaverDefaults defaultsForModuleWithName:@"com.obrhoff.musaicfm.preferences"];
+    NSData* stored = [NSKeyedArchiver archivedDataWithRootObject:self];
+    [defaults setObject:stored forKey:@"settings"];
     [defaults synchronize];
 }
 
-+ (Preferences *)preferences {
-    ScreenSaverDefaults *defaults = [ScreenSaverDefaults defaultsForModuleWithName:@"com.obrhoff.musaicfm.pref"];
-    NSData *prefData = [defaults objectForKey:@"preferences"];
-    Preferences *preferences = [NSKeyedUnarchiver unarchiveObjectWithData:prefData];
-    if (!preferences) preferences = [Preferences new];
++ (Preferences*)preferences
+{
+
+    static Preferences* preferences;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        ScreenSaverDefaults* defaults = [ScreenSaverDefaults defaultsForModuleWithName:@"com.obrhoff.musaicfm.preferences"];
+        NSData* prefData = [defaults objectForKey:@"settings"];
+        preferences = [NSKeyedUnarchiver unarchiveObjectWithData:prefData];
+        if (!preferences)
+            preferences = [Preferences new];
+    });
     return preferences;
 }
 

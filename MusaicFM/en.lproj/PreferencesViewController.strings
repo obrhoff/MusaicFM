@@ -1,0 +1,54 @@
+
+/* Class = "NSButtonCell"; title = "New Releases"; ObjectID = "1Ff-p6-hlQ"; */
+"1Ff-p6-hlQ.title" = "New Releases";
+
+/* Class = "NSButtonCell"; title = "User Albums"; ObjectID = "944-zA-vnI"; */
+"944-zA-vnI.title" = "User Albums";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Tag"; ObjectID = "DGZ-S4-vYT"; */
+"DGZ-S4-vYT.placeholderString" = "Tag";
+
+/* Class = "NSTextFieldCell"; title = "Rows:"; ObjectID = "EMN-10-4ed"; */
+"EMN-10-4ed.title" = "Rows:";
+
+/* Class = "NSButtonCell"; title = "Liked Songs"; ObjectID = "IEi-Ni-834"; */
+"IEi-Ni-834.title" = "Liked Songs";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "IKi-NS-HF6"; */
+"IKi-NS-HF6.title" = "OK";
+
+/* Class = "NSTextFieldCell"; title = "Musaic.fm"; ObjectID = "Qcr-jS-FeO"; */
+"Qcr-jS-FeO.title" = "Musaic.fm";
+
+/* Class = "NSWindow"; title = "Window"; ObjectID = "QvC-M9-y7g"; */
+"QvC-M9-y7g.title" = "Window";
+
+/* Class = "NSButtonCell"; title = "Tags"; ObjectID = "S4U-KU-9qs"; */
+"S4U-KU-9qs.title" = "Tags";
+
+/* Class = "NSTextFieldCell"; title = "Weekly"; ObjectID = "WER-ru-wWR"; */
+"WER-ru-wWR.title" = "Weekly";
+
+/* Class = "NSButtonCell"; title = "Albums"; ObjectID = "WUW-ut-tyC"; */
+"WUW-ut-tyC.title" = "Albums";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Last.fm Username"; ObjectID = "Y4f-xX-yb9"; */
+"Y4f-xX-yb9.placeholderString" = "Last.fm Username";
+
+/* Class = "NSTextFieldCell"; title = "Label"; ObjectID = "f3I-mo-CGi"; */
+"f3I-mo-CGi.title" = "Label";
+
+/* Class = "NSButtonCell"; title = "Artists"; ObjectID = "jTf-oy-Q5k"; */
+"jTf-oy-Q5k.title" = "Artists";
+
+/* Class = "NSButtonCell"; title = "Sign In"; ObjectID = "kHB-mP-CA7"; */
+"kHB-mP-CA7.title" = "Sign In";
+
+/* Class = "NSTextFieldCell"; title = "Delay:"; ObjectID = "nSY-ur-4WC"; */
+"nSY-ur-4WC.title" = "Delay:";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "uvK-sK-Q0z"; */
+"uvK-sK-Q0z.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "Musaic.fm is a macOS screen saver based on the idea of the iTunes screen saver. It displays Artworks based on your Spotify or Last.fm profile data.\n"; ObjectID = "vAJ-WC-7yX"; */
+"vAJ-WC-7yX.title" = "Musaic.fm is a macOS screen saver based on the idea of the iTunes screen saver. It displays Artworks based on your Spotify or Last.fm profile data.\n";

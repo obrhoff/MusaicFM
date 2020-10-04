@@ -10,16 +10,19 @@
 
 @implementation NSMutableArray (Shuffle)
 
-- (void)trim:(NSInteger)maximalItems {
+- (void)trim:(NSInteger)maximalItems
+{
     if (self.count < maximalItems) {
         return;
     }
     [self removeObjectsInRange:NSMakeRange(maximalItems, self.count - maximalItems)];
 }
 
-- (void)shuffle {
+- (void)shuffle
+{
     NSUInteger count = [self count];
-    if (count < 1) return;
+    if (count < 1)
+        return;
 
     for (NSUInteger i = 0; i < count - 1; ++i) {
         NSInteger remainingCount = count - i;
@@ -27,6 +30,5 @@
         [self exchangeObjectAtIndex:i withObjectAtIndex:exchangeIndex];
     }
 }
-
 
 @end

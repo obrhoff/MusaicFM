@@ -16,169 +16,216 @@
 #import "Manager.h"
 #import "Constants.h"
 #import "Factory.h"
+#import "MusaicFMView.h"
+#import "NSBundle+Bundle.h"
 
-@interface PreferencesViewController () <WKNavigationDelegate>
+@interface PreferencesViewController () <WKNavigationDelegate, NSTextFieldDelegate>
 
-@property (nonatomic, readwrite, weak) IBOutlet NSButton *doneButton;
-@property (nonatomic, readwrite, weak) IBOutlet NSPopUpButton *rowButton;
-@property (nonatomic, readwrite, weak) IBOutlet NSPopUpButton *delayButton;
+@property (nonatomic, readwrite, weak) IBOutlet NSButton* doneButton;
+@property (nonatomic, readwrite, weak) IBOutlet NSSlider* rowSlider;
+@property (nonatomic, readwrite, weak) IBOutlet NSSlider* delaySlider;
 
-@property (nonatomic, readwrite, weak) IBOutlet NSTextField *lastFmUserTextField;
-@property (nonatomic, readwrite, weak) IBOutlet NSTextField *lastFmTagTextField;
+@property (nonatomic, readwrite, weak) IBOutlet NSTextField* titleLabel;
+@property (nonatomic, readwrite, weak) IBOutlet NSTextField* descriptionLabel;
+@property (nonatomic, readwrite, weak) IBOutlet NSTextField* rowLabel;
+@property (nonatomic, readwrite, weak) IBOutlet NSTextField* delayLabel;
+@property (nonatomic, readwrite, weak) IBOutlet NSTextField* delayDescriptionLabel;
 
-@property (nonatomic, readwrite, weak) IBOutlet NSButton *lastFmUserRadio;
-@property (nonatomic, readwrite, weak) IBOutlet NSButton *lastFmTagRadio;
-@property (nonatomic, readwrite, weak) IBOutlet NSButton *spotifyUserRadio;
-@property (nonatomic, readwrite, weak) IBOutlet NSButton *spotifyNewRadio;
-@property (nonatomic, readwrite, weak) IBOutlet NSButton *spotifyFavoriteSongs;
-@property (nonatomic, readwrite, weak) IBOutlet NSButton *spotifyArtists;
-@property (nonatomic, readwrite, weak) IBOutlet NSButton *spotifySignIn;
+@property (nonatomic, readwrite, weak) IBOutlet NSTextField* lastFmUserTextField;
+@property (nonatomic, readwrite, weak) IBOutlet NSTextField* lastFmTagTextField;
 
-@property (nonatomic, readwrite, weak) IBOutlet NSPopUpButton *lastFmWeeklyButton;
+@property (nonatomic, readwrite, weak) IBOutlet NSTextField* lastFMPeriodLabel;
+@property (nonatomic, readwrite, weak) IBOutlet NSButton* lastfmPlayedAlbumsRadio;
+@property (nonatomic, readwrite, weak) IBOutlet NSButton* lastFmTagRadio;
+@property (nonatomic, readwrite, weak) IBOutlet NSButton* spotifyPlayedAlbumsRadio;
+@property (nonatomic, readwrite, weak) IBOutlet NSButton* spotifyNewRadio;
+@property (nonatomic, readwrite, weak) IBOutlet NSButton* spotifyFavoriteSongsRadio;
+@property (nonatomic, readwrite, weak) IBOutlet NSButton* spotifySignIn;
 
-@property (nonatomic, readwrite, weak) IBOutlet WKWebView *webView;
-@property (nonatomic, readwrite, weak) IBOutlet NSView *settingsView;
-@property (nonatomic, readwrite, weak) IBOutlet NSView *containerView;
+@property (nonatomic, readwrite, weak) IBOutlet NSPopUpButton* lastFmWeeklyButton;
+@property (nonatomic, readwrite, weak) IBOutlet WKWebView* webView;
+@property (nonatomic, readwrite, weak) IBOutlet NSView* contentView;
+@property (nonatomic, readwrite, weak) IBOutlet NSView* containerView;
 
-@property (nonatomic, readwrite, strong) Manager *manager;
+@property (nonatomic, readwrite, weak) IBOutlet MusaicFMView* previewView;
+@property (nonatomic, readwrite, strong) Manager* manager;
+@property (nonatomic, readwrite, strong) Preferences* preferences;
 
 @end
 
 @implementation PreferencesViewController
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     [super awakeFromNib];
-    self.manager = [Manager new];
-    self.containerView.wantsLayer = YES;
-    self.containerView.layer.backgroundColor = [NSColor colorWithRed:0.89 green:0.89 blue:0.89 alpha:1.00].CGColor;
     [self configure];
-    
-    NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-    for (NSHTTPCookie *cookie in cookieJar.cookies) [cookieJar deleteCookie:cookie];
 }
 
-- (void)configure {
-    Preferences *preferences = [Preferences preferences];
-    
+- (void)configure
+{
+    self.manager = [Manager new];
+    self.preferences = [Preferences preferences];
     self.webView.hidden = YES;
-    self.settingsView.hidden = NO;
-    
-    [self.rowButton addItemsWithTitles:@[@"2", @"3", @"4", @"5", @"6", @"7", @"8"]];
-    [self.delayButton addItemsWithTitles:@[@"2", @"3", @"4", @"5", @"6", @"7", @"8"]];
-    [self.lastFmWeeklyButton addItemsWithTitles:@[@"Overall", @"7 Days", @"1 Month", @"3 Month", @"6 Month", @"12 Month"]];
-    
-    self.rowButton.autoenablesItems = YES;
-    self.delayButton.autoenablesItems = YES;
-    
-    [self.rowButton selectItemWithTitle:@(preferences.rows).stringValue];
-    [self.delayButton selectItemWithTitle:@(preferences.delays).stringValue];
-    [self.lastFmWeeklyButton selectItemAtIndex:preferences.lastfmWeekly];
-    
-    NSButton *radioButton = [self radioButtons][preferences.mode];
-    radioButton.state = NSOnState;
-    
-    self.lastFmUserTextField.stringValue = preferences.lastfmUser ? preferences.lastfmUser : @"";
-    self.lastFmTagTextField.stringValue = preferences.lastfmTag ? preferences.lastfmTag : @"";
-    
-    [self endableDisableButtons];
-    
-    self.spotifySignIn.title = preferences.spotifyToken.length ? @"Sign out" : @"Sign In";
+    self.contentView.hidden = NO;
+    self.containerView.wantsLayer = YES;
+
+    self.lastFmTagTextField.delegate = self;
+    self.lastFmUserTextField.delegate = self;
+
+    self.previewView.layer.cornerRadius = 8;
+
+    [self.lastFmWeeklyButton addItemsWithTitles:@[ [NSBundle localizedString:@"lastfm_fetch_period_overall"],
+                                                   [NSBundle localizedString:@"lastfm_fetch_period_seven_days"],
+                                                   [NSBundle localizedString:@"lastfm_fetch_period_one_month"],
+                                                   [NSBundle localizedString:@"lastfm_fetch_period_three_month"],
+                                                   [NSBundle localizedString:@"lastfm_fetch_period_six_month"],
+                                                   [NSBundle localizedString:@"lastfm_fetch_period_one_year"]]];
+
+    [self updateView];
 }
 
-- (void)endableDisableButtons {
-    Preferences *preferences = [Preferences preferences];
-    NSMutableArray *buttons = self.radioButtons.mutableCopy;
-    for (NSButton *button in buttons) {
-        button.enabled = preferences.spotifyToken.length;
+- (void)updateView
+{
+
+    NSButton* radioButton = self.radioButtons[self.preferences.mode];
+    for (NSButton* button in self.radioButtons) {
+        button.state = button == radioButton ? NSOnState : NSOffState;
     }
-}
 
-- (NSArray *)radioButtons {
-    return @[self.lastFmUserRadio, self.lastFmTagRadio, self.spotifyUserRadio, self.spotifyNewRadio, self.spotifyFavoriteSongs, self.spotifyArtists];
-}
-
-- (void)windowDidLoad {
-    [super windowDidLoad];
-    self.window.styleMask = NSWindowStyleMaskTitled;
-}
-
-- (IBAction)didSelectRadio:(NSButton *)sender {
-    NSMutableArray *buttons = self.radioButtons.mutableCopy;
-    [buttons removeObject:sender];
-    for (NSButton *button in buttons) {
-        button.state = NSOffState;
+    for (NSButton* button in @[ self.spotifyPlayedAlbumsRadio, self.spotifyNewRadio, self.spotifyFavoriteSongsRadio ]) {
+        button.enabled = self.preferences.spotifyToken.length;
     }
+
+    self.rowSlider.integerValue = self.preferences.rows;
+    self.delaySlider.integerValue = self.preferences.delays;
+    self.lastFmUserTextField.stringValue = self.preferences.lastfmUser;
+    self.lastFmTagTextField.stringValue = self.preferences.lastfmTag;
+
+    self.titleLabel.stringValue = [NSBundle localizedString:@"app_title"];
+    self.descriptionLabel.stringValue = [NSBundle localizedString:@"app_title_description"];
+    self.rowLabel.stringValue = [NSBundle localizedString:@"rows"];
+
+    self.delayLabel.stringValue = [NSBundle localizedString:@"delay"];
+
+    self.spotifySignIn.title = self.preferences.spotifyToken.length
+        ? [NSBundle localizedString:@"spotify_sign_out"]
+        : [NSBundle localizedString:@"spotify_sign_in"];
+
+    self.spotifyNewRadio.title = [NSBundle localizedString:@"spotify_new_releases"];
+    self.spotifyFavoriteSongsRadio.title = [NSBundle localizedString:@"spotify_liked_songs"];
+    self.spotifyPlayedAlbumsRadio.title = [NSBundle localizedString:@"spotify_albums"];
+    self.lastFMPeriodLabel.stringValue = [NSBundle localizedString:@"lastfm_fetch_period_overall_title"];
+    self.lastFmTagRadio.title = [NSBundle localizedString:@"lastfm_tags"];
+    self.lastfmPlayedAlbumsRadio.title = [NSBundle localizedString:@"lastfm_user_albums"];
+    self.delayDescriptionLabel.stringValue = [NSString stringWithFormat:[NSBundle localizedString:@"delay_in_seconds"], self.delaySlider.integerValue];
+    self.doneButton.title = [NSBundle localizedString:@"okay"];
+    [self.lastFmWeeklyButton selectItemAtIndex:self.preferences.lastfmWeekly];
 }
 
-- (IBAction)loginSpotify:(NSButton *)sender {
-    Preferences *preferences = [Preferences preferences];
-    if (preferences.spotifyToken.length) {
-        preferences.spotifyToken = nil;
-        preferences.spotifyRefresh = nil;
-        preferences.spotifyCode = nil;
-        [preferences synchronize];
-        [self configure];
-    }
-    else {
-        self.webView.hidden = NO;
-        self.settingsView.hidden = YES;
-        NSURLRequest *request = [NSURLRequest requestWithURL:[Factory spotifyAuthentification].URL];
+- (IBAction)loginSpotify:(NSButton*)sender
+{
+    if (self.preferences.spotifyToken.length) {
+        [self.preferences clear];
+        [self updateView];
+    } else {
+        NSURLRequest* request = [NSURLRequest requestWithURL:[Factory spotifyAuthentification].URL];
+        [self showLoginFlow:YES];
         [self.webView loadRequest:request];
     }
 }
 
-- (IBAction)dismissViewController:(NSButton *)doneButton {
-    [self.lastFmUserTextField resignFirstResponder];
-    
-    Preferences *preference = [Preferences preferences];
-    preference.rows = self.rowButton.indexOfSelectedItem + 2;
-    preference.delays = self.delayButton.indexOfSelectedItem + 2;
-    preference.lastfmUser = self.lastFmUserTextField.stringValue;
-    preference.lastfmWeekly = self.lastFmWeeklyButton.indexOfSelectedItem;
-    preference.lastfmTag = self.lastFmTagTextField.stringValue;
-    
-    NSPredicate *radioFilter = [NSPredicate predicateWithFormat:@"state == %i", NSOnState];
-    NSButton *radioButton = [[self radioButtons] filteredArrayUsingPredicate:radioFilter].firstObject;
-    if (radioButton) {
-        preference.mode = [[self radioButtons] indexOfObject:radioButton];
-    }
-    
-    [preference clear];
-    [preference synchronize];
-    
+- (void)showLoginFlow:(BOOL)show
+{
+    self.webView.hidden = !show;
+    self.contentView.hidden = show;
+
+    CATransition* transition = [CATransition new];
+    transition.type = @"flip";
+    transition.subtype = kCATransitionFromRight;
+    transition.duration = 0.6;
+
+    [self.containerView.layer addAnimation:transition forKey:nil];
+}
+
+- (IBAction)didSelectRadio:(NSButton*)sender
+{
+    self.preferences.mode = [[self radioButtons] indexOfObject:sender];
+    [self updateView];
+    [self.previewView fetchData];
+}
+
+- (IBAction)didChangeRowSlider:(id)sender
+{
+    self.preferences.rows = self.rowSlider.integerValue;
+    [self.previewView prepareLayout];
+    [self updateView];
+}
+
+- (IBAction)didChangeDelaySlider:(id)sender
+{
+    self.preferences.delays = self.delaySlider.integerValue;
+    [self updateView];
+}
+
+- (void)didChangeText
+{
+    self.preferences.lastfmUser = self.lastFmUserTextField.stringValue;
+    self.preferences.lastfmWeekly = self.lastFmWeeklyButton.indexOfSelectedItem;
+    self.preferences.lastfmTag = self.lastFmTagTextField.stringValue;
+    [self updateView];
+}
+
+- (IBAction)dismissViewController:(NSButton*)doneButton
+{
+    [self.preferences synchronize];
     [self.window.sheetParent endSheet:self.window returnCode:NSModalResponseOK];
 }
 
-- (NSString *)windowNibName {
+- (void)controlTextDidChange:(NSNotification*)obj
+{
+    [self didChangeText];
+}
+
+- (void)webView:(WKWebView*)webView decidePolicyForNavigationAction:(WKNavigationAction*)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
+{
+
+    NSURLComponents* components = [NSURLComponents componentsWithURL:webView.URL resolvingAgainstBaseURL:NO];
+    NSURLComponents* callbackComponents = [NSURLComponents componentsWithString:spotifyRedirectUrl];
+
+    if (![components.scheme isEqualToString:callbackComponents.scheme]) {
+        decisionHandler(WKNavigationActionPolicyAllow);
+        return;
+    }
+
+    NSPredicate* filter = [NSPredicate predicateWithFormat:@"name == %@", @"code"];
+    NSString* code = [[components.queryItems filteredArrayUsingPredicate:filter].firstObject value];
+    typeof(self) weakSelf = self;
+
+    dispatch_block_t dismiss = ^{
+        [weakSelf updateView];
+        [weakSelf showLoginFlow:NO];
+        decisionHandler(WKNavigationActionPolicyCancel);
+    };
+    if (!code.length) {
+        dismiss();
+        return;
+    }
+    [self.manager performSpotifyToken:code
+                    completionHandler:dismiss
+                           andFailure:^(NSError* error) {
+                               dismiss();
+                           }];
+}
+
+- (NSString*)windowNibName
+{
     return @"PreferencesViewController";
 }
 
--(void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    
-    NSURLComponents *components = [NSURLComponents componentsWithURL:webView.URL resolvingAgainstBaseURL:NO];
-     NSURLComponents *callbackComponents = [NSURLComponents componentsWithString:spotifyRedirectUrl];
-
-     if (![components.scheme isEqualToString:callbackComponents.scheme]) {
-         decisionHandler(WKNavigationActionPolicyAllow);
-         return;
-     }
-
-     NSPredicate *filter = [NSPredicate predicateWithFormat:@"name == %@", @"code"];
-     NSString *code = [[components.queryItems filteredArrayUsingPredicate:filter].firstObject value];
-     typeof(self) weakSelf = self;
-    
-     dispatch_block_t dismiss = ^{
-         [weakSelf configure];
-         decisionHandler(WKNavigationActionPolicyCancel);
-     };
-     if (!code.length) {
-         dismiss();
-         return;
-     }
-     [self.manager performSpotifyToken:code completionHandler:dismiss andFailure:^(NSError *error) {
-         dismiss();
-     }];
-    
+- (NSArray*)radioButtons
+{
+    return @[ self.lastfmPlayedAlbumsRadio, self.lastFmTagRadio, self.spotifyPlayedAlbumsRadio,
+        self.spotifyNewRadio, self.spotifyFavoriteSongsRadio];
 }
 
 @end

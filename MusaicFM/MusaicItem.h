@@ -16,6 +16,4 @@ typedef NS_ENUM (NSUInteger, MusaicAnimation) {
 
 @interface MusaicItem : NSCollectionViewItem
 
-- (void)configureUrl:(NSURL *)url andType:(MusaicAnimation)type;
-
 @end

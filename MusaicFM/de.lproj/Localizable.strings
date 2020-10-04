@@ -1,0 +1,32 @@
+/* 
+  File.strings
+  MusaicFM
+
+  Created by Dennis Oberhoff on 03.10.20.
+  Copyright © 2020 Dennis Oberhoff. All rights reserved.
+*/
+"app_title" = "Musaic.fm" ;
+"app_title_description" = "Musaic.fm ist ein Screensaver basierend auf dem klassischen iTunes Screen Saver. Er zeigt dir Coverarts basierend auf deine Spotify ooder Last.fm Profil Daten";
+
+"rows" = "Zeilen:";
+"delay" = "Animations Timing:";
+"delay_in_seconds" = "%lu Sekunden";
+
+"lastfm_fetch_period_overall_title" = "Datenperiode";
+"lastfm_fetch_period_overall" = "Alles";
+"lastfm_fetch_period_seven_days" = "7 Tage";
+"lastfm_fetch_period_one_month" = "1 Monat";
+"lastfm_fetch_period_three_month" = "3 Monate";
+"lastfm_fetch_period_six_month" = "6 Monate";
+"lastfm_fetch_period_one_year" = "1 Jahr";
+
+"lastfm_user_albums" = "Favorisierte Alben";
+"lastfm_tags" = "Tags";
+
+"spotify_liked_songs" = "Gelikte Songs";
+"spotify_new_releases" = "Neue Release";
+"spotify_albums" = "Gespielte Alben";
+"spotify_artists" = "Followed Artists";
+"spotify_sign_in" = "Login in Spotify";
+"spotify_sign_out" = "Aus Spotify ausloggen";
+"okay" = "OK";

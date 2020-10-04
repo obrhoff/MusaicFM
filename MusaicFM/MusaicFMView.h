@@ -10,4 +10,7 @@
 
 @interface MusaicFMView : ScreenSaverView
 
+-(void)prepareLayout;
+- (void)fetchData;
+
 @end

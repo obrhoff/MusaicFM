@@ -11,20 +11,21 @@
 
 @implementation Parser
 
-+ (NSArray *)parseSpotifyItems:(NSArray *)responseDicts {
-    NSMutableArray *items = [NSMutableArray array];
-    for (NSDictionary *albumDict in responseDicts) {
++ (NSArray*)parseSpotifyItems:(NSArray*)responseDicts
+{
+    NSMutableArray* items = [NSMutableArray array];
+    for (NSDictionary* albumDict in responseDicts) {
         float targetSize = 300;
-        NSArray *images = [albumDict[@"images"] sortedArrayUsingComparator:^NSComparisonResult (NSDictionary *first, NSDictionary *second) {
+        NSArray* images = [albumDict[@"images"] sortedArrayUsingComparator:^NSComparisonResult(NSDictionary* first, NSDictionary* second) {
             CGFloat firstCompare = fabs([first[@"width"] floatValue] - targetSize);
             CGFloat secondCompare = fabs([second[@"width"] floatValue] - targetSize);
             return firstCompare >= secondCompare;
         }];
-        NSURL *artworkUrl = [NSURL URLWithString:images.firstObject[@"url"]];
+        NSURL* artworkUrl = [NSURL URLWithString:images.firstObject[@"url"]];
         if (!artworkUrl) {
             continue;
         }
-        Artwork *artwork = [Artwork new];
+        Artwork* artwork = [Artwork new];
         artwork.artworkUrl = artworkUrl;
         artwork.album = albumDict[@"name"];
         artwork.artist = [albumDict[@"artists"] firstObject][@"name"];
@@ -35,17 +36,18 @@
     return [NSSet setWithArray:items.copy].allObjects;
 }
 
-+ (NSArray *)parseItems:(NSArray *)itemDicts {
-    NSMutableArray *items = [NSMutableArray arrayWithCapacity:itemDicts.count];
++ (NSArray*)parseItems:(NSArray*)itemDicts
+{
+    NSMutableArray* items = [NSMutableArray arrayWithCapacity:itemDicts.count];
 
-    for (NSDictionary *itemDict in itemDicts) {
-        NSString *urlText = [itemDict[@"image"] lastObject][@"#text"];
-        NSURL *artworkUrl = [NSURL URLWithString:urlText];
+    for (NSDictionary* itemDict in itemDicts) {
+        NSString* urlText = [itemDict[@"image"] lastObject][@"#text"];
+        NSURL* artworkUrl = [NSURL URLWithString:urlText];
         if (!artworkUrl) {
             continue;
         }
 
-        Artwork *artwork = [Artwork new];
+        Artwork* artwork = [Artwork new];
         artwork.artworkUrl = artworkUrl;
         artwork.album = itemDict[@"name"];
         artwork.url = [NSURL URLWithString:itemDict[@"url"]];
