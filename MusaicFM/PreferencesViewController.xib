@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17156" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17156"/>
-        <plugIn identifier="com.apple.WebKit2IBPlugin" version="17156"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="17701"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -39,7 +39,7 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="674" height="656"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1025"/>
             <view key="contentView" wantsLayer="YES" misplaced="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="674" height="656"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,19 +98,19 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="28" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="op4-Uu-Nod">
-                                                    <rect key="frame" x="24" y="176" width="725" height="413"/>
+                                                    <rect key="frame" x="24" y="177" width="725" height="412"/>
                                                     <subviews>
                                                         <stackView distribution="equalCentering" orientation="horizontal" alignment="top" spacing="48" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MOc-xc-c0N">
-                                                            <rect key="frame" x="0.0" y="253" width="725" height="160"/>
+                                                            <rect key="frame" x="0.0" y="252" width="725" height="160"/>
                                                             <subviews>
                                                                 <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="32" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" horizontalClippingResistancePriority="250" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F0E-h4-vLx">
-                                                                    <rect key="frame" x="0.0" y="14" width="421" height="146"/>
+                                                                    <rect key="frame" x="0.0" y="16" width="421" height="144"/>
                                                                     <subviews>
                                                                         <stackView verifyAmbiguity="ignoreSizes" distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" horizontalHuggingPriority="100" horizontalCompressionResistancePriority="100" verticalCompressionResistancePriority="250" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XT2-UV-kIR" userLabel="Rows Stack View">
-                                                                            <rect key="frame" x="0.0" y="101" width="421" height="45"/>
+                                                                            <rect key="frame" x="0.0" y="100" width="421" height="44"/>
                                                                             <subviews>
                                                                                 <textField horizontalHuggingPriority="100" verticalHuggingPriority="750" horizontalCompressionResistancePriority="100" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-0S-7NJ" userLabel="Rows Label">
-                                                                                    <rect key="frame" x="-2" y="29" width="425" height="16"/>
+                                                                                    <rect key="frame" x="-2" y="28" width="425" height="16"/>
                                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Rows:" id="EMN-10-4ed">
                                                                                         <font key="font" usesAppearanceFont="YES"/>
                                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -118,7 +118,7 @@
                                                                                     </textFieldCell>
                                                                                 </textField>
                                                                                 <slider horizontalHuggingPriority="100" verticalHuggingPriority="750" horizontalCompressionResistancePriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="Pil-do-IkE" userLabel="Row Slider">
-                                                                                    <rect key="frame" x="-2" y="-1" width="425" height="24"/>
+                                                                                    <rect key="frame" x="-2" y="-6" width="425" height="28"/>
                                                                                     <sliderCell key="cell" alignment="left" minValue="2" maxValue="8" doubleValue="4" tickMarkPosition="below" numberOfTickMarks="7" allowsTickMarkValuesOnly="YES" sliderType="linear" id="w4P-4d-66j"/>
                                                                                     <connections>
                                                                                         <action selector="didChangeRowSlider:" target="-2" id="rtp-Vn-XZV"/>
@@ -135,10 +135,10 @@
                                                                             </customSpacing>
                                                                         </stackView>
                                                                         <stackView verifyAmbiguity="ignoreSizes" distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" horizontalHuggingPriority="100" horizontalCompressionResistancePriority="100" verticalCompressionResistancePriority="250" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aw4-aX-qSW" userLabel="Delay Stack View">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="421" height="69"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="421" height="68"/>
                                                                             <subviews>
                                                                                 <textField horizontalHuggingPriority="100" verticalHuggingPriority="750" horizontalCompressionResistancePriority="100" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arw-UQ-7m9" userLabel="Delay Label">
-                                                                                    <rect key="frame" x="-2" y="53" width="425" height="16"/>
+                                                                                    <rect key="frame" x="-2" y="52" width="425" height="16"/>
                                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Delay:" id="nSY-ur-4WC">
                                                                                         <font key="font" usesAppearanceFont="YES"/>
                                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -146,7 +146,7 @@
                                                                                     </textFieldCell>
                                                                                 </textField>
                                                                                 <slider horizontalHuggingPriority="100" verticalHuggingPriority="750" horizontalCompressionResistancePriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="KMU-Jf-zHE" userLabel="Delay Slider">
-                                                                                    <rect key="frame" x="-2" y="23" width="425" height="24"/>
+                                                                                    <rect key="frame" x="-2" y="18" width="425" height="28"/>
                                                                                     <sliderCell key="cell" state="on" alignment="left" minValue="1" maxValue="6" doubleValue="4" tickMarkPosition="below" numberOfTickMarks="6" allowsTickMarkValuesOnly="YES" sliderType="linear" id="l0q-DU-9vh"/>
                                                                                     <connections>
                                                                                         <action selector="didChangeDelaySlider:" target="-2" id="oeT-Wv-PkL"/>
@@ -192,6 +192,9 @@
                                                                         <constraint firstAttribute="height" constant="160" id="FoE-gr-wdx"/>
                                                                         <constraint firstAttribute="height" secondItem="22F-DG-X2m" secondAttribute="width" multiplier="10:16" id="oUz-LO-Jay"/>
                                                                     </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isPreview" value="YES"/>
+                                                                    </userDefinedRuntimeAttributes>
                                                                 </customView>
                                                             </subviews>
                                                             <visibilityPriorities>
@@ -204,26 +207,26 @@
                                                             </customSpacing>
                                                         </stackView>
                                                         <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="IMk-C2-mIg">
-                                                            <rect key="frame" x="0.0" y="222" width="725" height="5"/>
+                                                            <rect key="frame" x="0.0" y="221" width="725" height="5"/>
                                                         </box>
                                                         <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="48" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mWR-V0-KRw" userLabel="Services StackView">
-                                                            <rect key="frame" x="0.0" y="0.0" width="457" height="196"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="457" height="195"/>
                                                             <subviews>
                                                                 <stackView verifyAmbiguity="off" distribution="fill" orientation="vertical" alignment="leading" spacing="12" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B7y-rh-8eu" userLabel="LastFM StackView">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="196"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="195"/>
                                                                     <subviews>
                                                                         <imageView horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="AZ8-iV-HIa" userLabel="Logo">
-                                                                            <rect key="frame" x="0.0" y="172" width="180" height="24"/>
+                                                                            <rect key="frame" x="0.0" y="171" width="180" height="24"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="24" id="8m7-NI-zhA"/>
                                                                             </constraints>
                                                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="topLeft" imageScaling="proportionallyUpOrDown" image="lastfm" id="W8v-Rw-Xxr"/>
                                                                         </imageView>
                                                                         <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SkE-CP-hDj">
-                                                                            <rect key="frame" x="0.0" y="58" width="180" height="102"/>
+                                                                            <rect key="frame" x="0.0" y="58" width="180" height="101"/>
                                                                             <subviews>
                                                                                 <textField horizontalHuggingPriority="100" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAp-bf-WXj">
-                                                                                    <rect key="frame" x="-2" y="83" width="184" height="19"/>
+                                                                                    <rect key="frame" x="-2" y="82" width="184" height="19"/>
                                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Weekly" id="WER-ru-wWR">
                                                                                         <font key="font" size="14" name="Avenir-Medium"/>
                                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -231,7 +234,7 @@
                                                                                     </textFieldCell>
                                                                                 </textField>
                                                                                 <popUpButton horizontalHuggingPriority="100" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="IMc-ag-Xl2">
-                                                                                    <rect key="frame" x="-2" y="51" width="185" height="25"/>
+                                                                                    <rect key="frame" x="-3" y="50" width="187" height="25"/>
                                                                                     <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="cir-4s-Fvz">
                                                                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                                                         <font key="font" metaFont="menu"/>
@@ -242,7 +245,7 @@
                                                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="46"/>
                                                                                     <subviews>
                                                                                         <button horizontalHuggingPriority="100" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ePH-fH-qW6">
-                                                                                            <rect key="frame" x="-1" y="29" width="183" height="18"/>
+                                                                                            <rect key="frame" x="-2" y="29" width="182" height="18"/>
                                                                                             <buttonCell key="cell" type="radio" title="User Albums" bezelStyle="regularSquare" imagePosition="left" inset="2" id="944-zA-vnI">
                                                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -285,7 +288,7 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="180" height="46"/>
                                                                             <subviews>
                                                                                 <button horizontalHuggingPriority="100" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="bdn-K7-F4H">
-                                                                                    <rect key="frame" x="-1" y="29" width="183" height="18"/>
+                                                                                    <rect key="frame" x="-2" y="29" width="182" height="18"/>
                                                                                     <buttonCell key="cell" type="radio" title="Tags" bezelStyle="regularSquare" imagePosition="left" inset="2" id="S4U-KU-9qs">
                                                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -328,23 +331,23 @@
                                                                     </customSpacing>
                                                                 </stackView>
                                                                 <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="cI3-mR-YUk">
-                                                                    <rect key="frame" x="226" y="100" width="5" height="96"/>
+                                                                    <rect key="frame" x="226" y="99" width="5" height="96"/>
                                                                 </box>
                                                                 <stackView verifyAmbiguity="off" distribution="fill" orientation="vertical" alignment="leading" spacing="12" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arS-9m-cpn" userLabel="Spotify StackView">
-                                                                    <rect key="frame" x="277" y="63" width="180" height="133"/>
+                                                                    <rect key="frame" x="277" y="63" width="180" height="132"/>
                                                                     <subviews>
                                                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7iy-zJ-O1V">
-                                                                            <rect key="frame" x="0.0" y="109" width="180" height="24"/>
+                                                                            <rect key="frame" x="0.0" y="108" width="180" height="24"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="24" id="nlN-mC-pLc"/>
                                                                             </constraints>
                                                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="left" imageScaling="proportionallyDown" image="spotify" id="N9Z-kl-ERh"/>
                                                                         </imageView>
                                                                         <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fLW-4F-Qcq">
-                                                                            <rect key="frame" x="0.0" y="33" width="104" height="64"/>
+                                                                            <rect key="frame" x="0.0" y="32" width="109" height="64"/>
                                                                             <subviews>
                                                                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="SNV-nA-jNn">
-                                                                                    <rect key="frame" x="-1" y="47" width="96" height="18"/>
+                                                                                    <rect key="frame" x="-2" y="47" width="100" height="18"/>
                                                                                     <buttonCell key="cell" type="radio" title="Liked Songs" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="IEi-Ni-834">
                                                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -354,7 +357,7 @@
                                                                                     </connections>
                                                                                 </button>
                                                                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="puy-di-hME">
-                                                                                    <rect key="frame" x="-1" y="23" width="107" height="18"/>
+                                                                                    <rect key="frame" x="-2" y="23" width="111" height="18"/>
                                                                                     <buttonCell key="cell" type="radio" title="New Releases" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="1Ff-p6-hlQ">
                                                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -364,7 +367,7 @@
                                                                                     </connections>
                                                                                 </button>
                                                                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="WKy-gZ-pTl">
-                                                                                    <rect key="frame" x="-1" y="-1" width="68" height="18"/>
+                                                                                    <rect key="frame" x="-2" y="-1" width="72" height="18"/>
                                                                                     <buttonCell key="cell" type="radio" title="Albums" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="WUW-ut-tyC">
                                                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -386,7 +389,7 @@
                                                                             </customSpacing>
                                                                         </stackView>
                                                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LzT-bl-40q" userLabel="Login">
-                                                                            <rect key="frame" x="-6" y="-7" width="82" height="32"/>
+                                                                            <rect key="frame" x="-7" y="-7" width="76" height="32"/>
                                                                             <buttonCell key="cell" type="push" title="Sign In" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kHB-mP-CA7">
                                                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -444,10 +447,10 @@
                                         </view>
                                     </box>
                                     <stackView distribution="fill" orientation="vertical" alignment="trailing" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rx2-iN-OX8">
-                                        <rect key="frame" x="24" y="24" width="725" height="21"/>
+                                        <rect key="frame" x="24" y="24" width="725" height="20"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bsm-ai-r8D">
-                                                <rect key="frame" x="672" y="-7" width="59" height="32"/>
+                                                <rect key="frame" x="679" y="-7" width="53" height="32"/>
                                                 <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IKi-NS-HF6">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>

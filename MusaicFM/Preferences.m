@@ -58,6 +58,7 @@
 
 - (void)clear
 {
+    self.artworks = nil;
     self.spotifyToken = nil;
     self.spotifyRefresh = nil;
     self.spotifyCode = nil;

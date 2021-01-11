@@ -300,15 +300,17 @@
 
         [weakSelf performRequest:recovery.copy
             withCompletionHandler:^(NSDictionary* response) {
-                NSInteger errorCode = [response[@"error"][@"status"] integerValue];
-                if (response[@"error"]) {
-                    NSError* error = [NSError errorWithDomain:NSCocoaErrorDomain code:NSURLErrorNoPermissionsToReadFile userInfo:nil];
-                    if (errorCode == 401) {
+            
+            NSString *error = response[@"error"];
+                if (error) {
+                    if ([error isEqualToString:@"invalid_grant"]) {
                         [weakSelf.preferences clear];
                         [weakSelf.preferences synchronize];
+
                     }
                     if (failure)
-                        failure(error);
+                        failure([NSError errorWithDomain:NSCocoaErrorDomain
+                                                    code:NSURLErrorDataNotAllowed userInfo:nil]);
                 } else {
                     weakSelf.preferences.spotifyToken = response[@"access_token"];
                     [weakSelf.preferences synchronize];
