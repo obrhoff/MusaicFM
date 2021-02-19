@@ -9,7 +9,7 @@ MusaicFM is completely open source, so feel free to contribute to its developmen
 ### Homebrew
 
 ```
-$ brew cask install musaicfm
+$ brew install musaicfm
 ```
 
 ### Manual
