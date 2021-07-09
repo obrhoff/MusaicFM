@@ -1,0 +1,54 @@
+
+/* Class = "NSButtonCell"; title = "New Releases"; ObjectID = "1Ff-p6-hlQ"; */
+"1Ff-p6-hlQ.title" = "Nova izdanja";
+
+/* Class = "NSButtonCell"; title = "User Albums"; ObjectID = "944-zA-vnI"; */
+"944-zA-vnI.title" = "Korisnički albumi";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Tag"; ObjectID = "DGZ-S4-vYT"; */
+"DGZ-S4-vYT.placeholderString" = "Oznaka";
+
+/* Class = "NSTextFieldCell"; title = "Rows:"; ObjectID = "EMN-10-4ed"; */
+"EMN-10-4ed.title" = "Broj redaka:";
+
+/* Class = "NSButtonCell"; title = "Liked Songs"; ObjectID = "IEi-Ni-834"; */
+"IEi-Ni-834.title" = "Omiljenje pjesme";
+
+/* Class = "NSButtonCell"; title = "OK"; ObjectID = "IKi-NS-HF6"; */
+"IKi-NS-HF6.title" = "U redu";
+
+/* Class = "NSTextFieldCell"; title = "Musaic.fm"; ObjectID = "Qcr-jS-FeO"; */
+"Qcr-jS-FeO.title" = "Musaic.fm";
+
+/* Class = "NSWindow"; title = "Window"; ObjectID = "QvC-M9-y7g"; */
+"QvC-M9-y7g.title" = "Prozor";
+
+/* Class = "NSButtonCell"; title = "Tags"; ObjectID = "S4U-KU-9qs"; */
+"S4U-KU-9qs.title" = "Oznake";
+
+/* Class = "NSTextFieldCell"; title = "Weekly"; ObjectID = "WER-ru-wWR"; */
+"WER-ru-wWR.title" = "Tjedno";
+
+/* Class = "NSButtonCell"; title = "Albums"; ObjectID = "WUW-ut-tyC"; */
+"WUW-ut-tyC.title" = "Albumi";
+
+/* Class = "NSTextFieldCell"; placeholderString = "Last.fm Username"; ObjectID = "Y4f-xX-yb9"; */
+"Y4f-xX-yb9.placeholderString" = "Last.fm korisničko ime";
+
+/* Class = "NSTextFieldCell"; title = "Label"; ObjectID = "f3I-mo-CGi"; */
+"f3I-mo-CGi.title" = "Etiketa";
+
+/* Class = "NSButtonCell"; title = "Artists"; ObjectID = "jTf-oy-Q5k"; */
+"jTf-oy-Q5k.title" = "Izvođači";
+
+/* Class = "NSButtonCell"; title = "Sign In"; ObjectID = "kHB-mP-CA7"; */
+"kHB-mP-CA7.title" = "Prijava";
+
+/* Class = "NSTextFieldCell"; title = "Delay:"; ObjectID = "nSY-ur-4WC"; */
+"nSY-ur-4WC.title" = "Kašnjenje:";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "uvK-sK-Q0z"; */
+"uvK-sK-Q0z.title" = "Kutija";
+
+/* Class = "NSTextFieldCell"; title = "Musaic.fm is a macOS screen saver based on the idea of the iTunes screen saver. It displays Artworks based on your Spotify or Last.fm profile data.\n"; ObjectID = "vAJ-WC-7yX"; */
+"vAJ-WC-7yX.title" = "Musaic.fm je čuvar ekrana zasnovan na klasičnom iTunes čuvaru ekrana. Prikazuje slike na temelju podataka tvog Spotify ili Last.fm profila.\n";

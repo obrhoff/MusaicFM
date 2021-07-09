@@ -1,0 +1,34 @@
+/* 
+  File.strings
+  MusaicFM
+
+  Created by Dennis Oberhoff on 03.10.20.
+  Copyright © 2020 Dennis Oberhoff. All rights reserved.
+*/
+
+"app_title" = "Musaic.fm" ;
+"app_title_description" = "Musaic.fm je čuvar ekrana zasnovan na klasičnom iTunes čuvaru ekrana. Prikazuje slike na temelju podataka tvog Spotify ili Last.fm profila.";
+
+"rows" = "Broj redaka:";
+"delay" = "Trajanje animacija:";
+"delay_in_seconds" = "%lu s";
+
+"lastfm_fetch_period_overall_title" = "Razdoblje";
+"lastfm_fetch_period_overall" = "Sveukupno";
+"lastfm_fetch_period_seven_days" = "7 dana";
+"lastfm_fetch_period_one_month" = "1 mjesec";
+"lastfm_fetch_period_three_month" = "3 mjeseca";
+"lastfm_fetch_period_six_month" = "6 mjeseci";
+"lastfm_fetch_period_one_year" = "1 godina";
+
+"lastfm_user_albums" = "Omiljeni albumi korisnika";
+"lastfm_tags" = "Oznake";
+
+"spotify_liked_songs" = "Omiljene pjesme";
+"spotify_new_releases" = "Nova izdanja";
+"spotify_albums" = "Svirani albumi";
+"spotify_artists" = "Praćeni izvođači";
+"spotify_sign_in" = "Prijavi su na Spotify";
+"spotify_sign_out" = "Odjavi se sa Spotify";
+
+"okay" = "U redu";
