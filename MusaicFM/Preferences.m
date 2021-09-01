@@ -18,7 +18,7 @@
     if (self) {
         self.rows = 4;
         self.delays = 5;
-        self.lastfmUser = @"DocterD";
+        self.lastfmUser = @"obrhoff";
         self.lastfmTag = @"HipHop";
     }
     return self;

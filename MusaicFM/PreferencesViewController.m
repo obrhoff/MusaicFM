@@ -167,6 +167,13 @@
     [self updateView];
 }
 
+- (IBAction)didSelectLastfmInterfal:(id)sender
+{
+    self.preferences.lastfmWeekly = self.lastFmWeeklyButton.indexOfSelectedItem;
+    [self updateView];
+}
+
+
 - (void)didChangeText
 {
     self.preferences.lastfmUser = self.lastFmUserTextField.stringValue;
