@@ -193,10 +193,11 @@
     [self didChangeText];
 }
 
-- (void)webView:(WKWebView*)webView decidePolicyForNavigationAction:(WKNavigationAction*)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
+- (void)webView:(WKWebView*)webView decidePolicyForNavigationAction:(WKNavigationAction*)navigationAction
+decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
 {
 
-    NSURLComponents* components = [NSURLComponents componentsWithURL:webView.URL resolvingAgainstBaseURL:NO];
+    NSURLComponents* components = [NSURLComponents componentsWithURL:[navigationAction request].URL resolvingAgainstBaseURL:NO];
     NSURLComponents* callbackComponents = [NSURLComponents componentsWithString:spotifyRedirectUrl];
 
     if (![components.scheme isEqualToString:callbackComponents.scheme]) {
@@ -231,8 +232,11 @@
 
 - (NSArray*)radioButtons
 {
-    return @[ self.lastfmPlayedAlbumsRadio, self.lastFmTagRadio, self.spotifyPlayedAlbumsRadio,
-        self.spotifyNewRadio, self.spotifyFavoriteSongsRadio];
+    return @[ self.lastfmPlayedAlbumsRadio,
+              self.lastFmTagRadio,
+              self.spotifyPlayedAlbumsRadio,
+              self.spotifyNewRadio,
+              self.spotifyFavoriteSongsRadio];
 }
 
 @end
