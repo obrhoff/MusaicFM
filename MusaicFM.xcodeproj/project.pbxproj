@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4295B8342B2DAD55000923DA /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4295B8332B2DAD55000923DA /* CoreImage.framework */; };
 		79F4836421DBBEFB00F24553 /* Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D32D811DF2A86E0013574C /* Factory.m */; };
 		95377F48252647A600BE5A63 /* MusaicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E149F9961DD8C6F600D9E39F /* MusaicItem.m */; };
 		95377F4B252647AB00BE5A63 /* MusaicFMView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CF259E1DD7D8D500441255 /* MusaicFMView.m */; };
@@ -65,6 +66,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4295B8332B2DAD55000923DA /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		9538326D2528E7BE006B0F81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		953832712528E7D4006B0F81 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9538327E2528F459006B0F81 /* PreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesViewController.xib; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			files = (
 				E1472E541DD8D1C70007E945 /* Foundation.framework in Frameworks */,
 				E1472E521DD8D1C10007E945 /* Cocoa.framework in Frameworks */,
+				4295B8342B2DAD55000923DA /* CoreImage.framework in Frameworks */,
 				E1FF4D9C2350B9BA00B89371 /* WebKit.framework in Frameworks */,
 				E1C725D32528AB6100FE944D /* SDWebImage in Frameworks */,
 			);
@@ -178,6 +181,7 @@
 		E1472E501DD8D1C10007E945 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4295B8332B2DAD55000923DA /* CoreImage.framework */,
 				E13191BA1DE1C4CA005EFA47 /* WebKit.framework */,
 				E1472E531DD8D1C70007E945 /* Foundation.framework */,
 				E1472E511DD8D1C10007E945 /* Cocoa.framework */,
@@ -320,10 +324,9 @@
 			};
 			buildConfigurationList = E1CF25931DD7D8D500441255 /* Build configuration list for PBXProject "MusaicFM" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 				de,
@@ -533,8 +536,9 @@
 				DEVELOPMENT_TEAM = YE33ZK7Z99;
 				INFOPLIST_FILE = MusaicFM/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.2.5;
+				MACH_O_TYPE = mh_bundle;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.2.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.obrhoff.MusaicFM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -552,8 +556,9 @@
 				DEVELOPMENT_TEAM = YE33ZK7Z99;
 				INFOPLIST_FILE = MusaicFM/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.2.5;
+				MACH_O_TYPE = mh_bundle;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.2.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.obrhoff.MusaicFM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -575,7 +580,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.obrhoff.MusaicFMPreferences;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -597,7 +602,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.obrhoff.MusaicFMPreferences;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -643,7 +648,7 @@
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.11.1;
+				minimumVersion = 5.19.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

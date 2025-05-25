@@ -89,7 +89,7 @@
 
     NSButton* radioButton = self.radioButtons[self.preferences.mode];
     for (NSButton* button in self.radioButtons) {
-        button.state = button == radioButton ? NSOnState : NSOffState;
+        button.state = button == radioButton ? NSControlStateValueOn : NSControlStateValueOff;
     }
 
     for (NSButton* button in @[ self.spotifyPlayedAlbumsRadio, self.spotifyNewRadio, self.spotifyFavoriteSongsRadio ]) {

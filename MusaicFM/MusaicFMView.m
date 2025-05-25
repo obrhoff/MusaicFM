@@ -42,6 +42,10 @@
     return self;
 }
 
+- (void)dealloc {
+    [self.timer invalidate];
+}
+
 - (void)awakeFromNib
 {
     [super awakeFromNib];
@@ -57,6 +61,16 @@
     [self configureCollectionView];
     [self prepareLayout];
     [self fetchData];
+
+    [NSWorkspace.sharedWorkspace.notificationCenter 
+     addObserver:self
+     selector:@selector(onSleepNote:)
+     name:NSWorkspaceWillSleepNotification object:nil];
+
+    [NSDistributedNotificationCenter.defaultCenter
+     addObserver: self
+     selector:@selector (willStop:)
+     name: @"com.apple.screensaver.willstop" object:nil];
 }
 
 - (void)configureCollectionView
@@ -210,6 +224,20 @@
 - (BOOL)hasConfigureSheet
 {
     return YES;
+}
+
+-(void)onSleepNote:(NSNotification*)inNotification
+{
+    if(@available (macOS 14.0, *)) {
+        exit (0);
+    }
+}
+
+- (void)willStop:(NSNotification*)inNotification
+{
+    if(@available (macOS 14.0, *)) {
+        exit (0);
+    }
 }
 
 - (NSWindow*)configureSheet
