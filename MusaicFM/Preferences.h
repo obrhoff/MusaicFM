@@ -8,31 +8,33 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM (NSUInteger, PreferencesMode) {
-    PreferencesModeLastFmUser = 0,
-    PreferencesModeTag = 1,
-    PreferencesModeSpotifyUser = 2,
-    PreferencesModeSpotifyReleases = 3,
-    PreferencesModeSpotifyLikedSongs = 4,
-    PreferencesModeSpotifyArtists = 5,
+typedef NS_ENUM(NSUInteger, PreferencesMode) {
+  PreferencesModeLastFmUser = 0,
+  PreferencesModeTag = 1,
+  PreferencesModeSpotifyUser = 2,
+  PreferencesModeSpotifyReleases = 3,
+  PreferencesModeSpotifyLikedSongs = 4,
+  PreferencesModeSpotifyArtists = 5,
+  PreferencesModeDeezer = 6,
 };
 
 @interface Preferences : NSObject <NSCoding>
 
-@property (nonatomic, readwrite, assign) PreferencesMode mode;
+@property(nonatomic, readwrite, assign) PreferencesMode mode;
 
-@property (nonatomic, readwrite, strong) NSString *spotifyToken;
-@property (nonatomic, readwrite, strong) NSString *spotifyRefresh;
-@property (nonatomic, readwrite, strong) NSString *spotifyCode;
+@property(nonatomic, readwrite, strong) NSString *spotifyToken;
+@property(nonatomic, readwrite, strong) NSString *spotifyRefresh;
+@property(nonatomic, readwrite, strong) NSString *spotifyCode;
 
-@property (nonatomic, readwrite, strong) NSString *lastfmUser;
-@property (nonatomic, readwrite, strong) NSString *lastfmTag;
+@property(nonatomic, readwrite, strong) NSString *lastfmUser;
+@property(nonatomic, readwrite, strong) NSString *lastfmTag;
+@property(nonatomic, readwrite, strong) NSString *deezerUserId;
 
-@property (nonatomic, readwrite, assign) NSInteger rows;
-@property (nonatomic, readwrite, assign) NSInteger delays;
-@property (nonatomic, readwrite, assign) NSInteger lastfmWeekly;
+@property(nonatomic, readwrite, assign) NSInteger rows;
+@property(nonatomic, readwrite, assign) NSInteger delays;
+@property(nonatomic, readwrite, assign) NSInteger lastfmWeekly;
 
-@property (nonatomic, readwrite, strong) NSArray *artworks;
+@property(nonatomic, readwrite, strong) NSArray *artworks;
 
 - (void)synchronize;
 - (void)clear;

@@ -1,0 +1,34 @@
+/* 
+  File.strings
+  MusaicFM
+
+  Created by Dennis Oberhoff on 03.10.20.
+  Copyright © 2020 Dennis Oberhoff. All rights reserved.
+*/
+
+"app_title" = "Musaic.fm" ;
+"app_title_description" = "Musaic.fm est un économiseur d'écran macOS basé sur l'idée de l'économiseur d'écran iTunes. Il affiche des pochettes d'album en fonction des données de votre profil Spotify ou Last.fm.";
+
+"rows" = "Nombre de lignes:";
+"delay" = "Durée de l'animation:";
+"delay_in_seconds" = "%lu s";
+
+"lastfm_fetch_period_overall_title" = "Période";
+"lastfm_fetch_period_overall" = "Total";
+"lastfm_fetch_period_seven_days" = "7 jours";
+"lastfm_fetch_period_one_month" = "1 mois";
+"lastfm_fetch_period_three_month" = "3 mois";
+"lastfm_fetch_period_six_month" = "6 mois";
+"lastfm_fetch_period_one_year" = "1 an";
+
+"lastfm_user_albums" = "Albums favoris de l'utilisateur";
+"lastfm_tags" = "Tags";
+
+"spotify_liked_songs" = "Chansons aimées";
+"spotify_new_releases" = "Nouvelles sorties";
+"spotify_albums" = "Albums joués";
+"spotify_artists" = "Artistes suivis";
+"spotify_sign_in" = "Se connecter à Spotify";
+"spotify_sign_out" = "Se déconnecter de Spotify";
+
+"okay" = "OK";

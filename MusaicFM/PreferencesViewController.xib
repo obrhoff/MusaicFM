@@ -11,6 +11,8 @@
             <connections>
                 <outlet property="containerView" destination="Fma-us-Bvs" id="uge-iF-sqr"/>
                 <outlet property="contentView" destination="5d2-Ao-AQH" id="Vgc-y5-Bj4"/>
+                <outlet property="deezerRadio" destination="bdn-K7-F4H" id="g7M-DG-RgF"/>
+                <outlet property="deezerUserIdTextField" destination="tTz-rb-UGb" id="ZhY-rI-ChL"/>
                 <outlet property="delayDescriptionLabel" destination="Ewq-qb-IFc" id="Grd-wn-fEd"/>
                 <outlet property="delayLabel" destination="arw-UQ-7m9" id="eNh-Jc-tb0"/>
                 <outlet property="delaySlider" destination="KMU-Jf-zHE" id="mTj-3Q-Fqu"/>
@@ -39,16 +41,16 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="674" height="656"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1512" height="948"/>
             <view key="contentView" wantsLayer="YES" misplaced="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="674" height="656"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <customView placeholderIntrinsicWidth="773" placeholderIntrinsicHeight="818" translatesAutoresizingMaskIntoConstraints="NO" id="Fma-us-Bvs" userLabel="Container">
-                        <rect key="frame" x="12" y="12" width="773" height="818"/>
+                        <rect key="frame" x="12" y="12" width="782" height="818"/>
                         <subviews>
                             <wkWebView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m05-OP-Omr">
-                                <rect key="frame" x="0.0" y="0.0" width="773" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="782" height="818"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -58,10 +60,10 @@
                                 </connections>
                             </wkWebView>
                             <stackView distribution="equalSpacing" orientation="vertical" alignment="leading" spacing="12" horizontalStackHuggingPriority="250" verticalStackHuggingPriority="249.99998474121094" verticalHuggingPriority="100" horizontalCompressionResistancePriority="100" verticalCompressionResistancePriority="100" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5d2-Ao-AQH" userLabel="Main Vertical">
-                                <rect key="frame" x="0.0" y="0.0" width="773" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="782" height="818"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sbo-WQ-gyy" userLabel="Title Stack View">
-                                        <rect key="frame" x="24" y="696" width="725" height="98"/>
+                                        <rect key="frame" x="24" y="696" width="734" height="98"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8Ds-Ek-Tso">
                                                 <rect key="frame" x="-2" y="65" width="118" height="33"/>
@@ -72,7 +74,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <textField horizontalHuggingPriority="200" verticalHuggingPriority="750" horizontalCompressionResistancePriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="RWs-Uh-lt2">
-                                                <rect key="frame" x="-2" y="0.0" width="729" height="57"/>
+                                                <rect key="frame" x="-2" y="0.0" width="738" height="57"/>
                                                 <textFieldCell key="cell" id="vAJ-WC-7yX">
                                                     <font key="font" size="14" name="Avenir-Medium"/>
                                                     <string key="title">Musaic.fm is a macOS screen saver based on the idea of the iTunes screen saver. It displays Artworks based on your Spotify or Last.fm profile data.
@@ -92,25 +94,25 @@
                                         </customSpacing>
                                     </stackView>
                                     <box horizontalHuggingPriority="100" horizontalCompressionResistancePriority="100" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="uvK-sK-Q0z">
-                                        <rect key="frame" x="-3" y="60" width="779" height="619"/>
+                                        <rect key="frame" x="0.0" y="63" width="782" height="619"/>
                                         <view key="contentView" id="eIo-Tx-sXi">
-                                            <rect key="frame" x="3" y="3" width="773" height="613"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="782" height="619"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="28" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="op4-Uu-Nod">
-                                                    <rect key="frame" x="24" y="177" width="725" height="412"/>
+                                                    <rect key="frame" x="24" y="235" width="734" height="360"/>
                                                     <subviews>
                                                         <stackView distribution="equalCentering" orientation="horizontal" alignment="top" spacing="48" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MOc-xc-c0N">
-                                                            <rect key="frame" x="0.0" y="252" width="725" height="160"/>
+                                                            <rect key="frame" x="0.0" y="200" width="734" height="160"/>
                                                             <subviews>
                                                                 <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="32" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" horizontalClippingResistancePriority="250" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F0E-h4-vLx">
-                                                                    <rect key="frame" x="0.0" y="16" width="421" height="144"/>
+                                                                    <rect key="frame" x="0.0" y="24" width="430" height="136"/>
                                                                     <subviews>
                                                                         <stackView verifyAmbiguity="ignoreSizes" distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" horizontalHuggingPriority="100" horizontalCompressionResistancePriority="100" verticalCompressionResistancePriority="250" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XT2-UV-kIR" userLabel="Rows Stack View">
-                                                                            <rect key="frame" x="0.0" y="100" width="421" height="44"/>
+                                                                            <rect key="frame" x="0.0" y="96" width="430" height="40"/>
                                                                             <subviews>
                                                                                 <textField horizontalHuggingPriority="100" verticalHuggingPriority="750" horizontalCompressionResistancePriority="100" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-0S-7NJ" userLabel="Rows Label">
-                                                                                    <rect key="frame" x="-2" y="28" width="425" height="16"/>
+                                                                                    <rect key="frame" x="-2" y="24" width="434" height="16"/>
                                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Rows:" id="EMN-10-4ed">
                                                                                         <font key="font" usesAppearanceFont="YES"/>
                                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -118,7 +120,7 @@
                                                                                     </textFieldCell>
                                                                                 </textField>
                                                                                 <slider horizontalHuggingPriority="100" verticalHuggingPriority="750" horizontalCompressionResistancePriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="Pil-do-IkE" userLabel="Row Slider">
-                                                                                    <rect key="frame" x="-2" y="-6" width="425" height="28"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="430" height="16"/>
                                                                                     <sliderCell key="cell" alignment="left" minValue="2" maxValue="8" doubleValue="4" tickMarkPosition="below" numberOfTickMarks="7" allowsTickMarkValuesOnly="YES" sliderType="linear" id="w4P-4d-66j"/>
                                                                                     <connections>
                                                                                         <action selector="didChangeRowSlider:" target="-2" id="rtp-Vn-XZV"/>
@@ -135,10 +137,10 @@
                                                                             </customSpacing>
                                                                         </stackView>
                                                                         <stackView verifyAmbiguity="ignoreSizes" distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" horizontalHuggingPriority="100" horizontalCompressionResistancePriority="100" verticalCompressionResistancePriority="250" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aw4-aX-qSW" userLabel="Delay Stack View">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="421" height="68"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="430" height="64"/>
                                                                             <subviews>
                                                                                 <textField horizontalHuggingPriority="100" verticalHuggingPriority="750" horizontalCompressionResistancePriority="100" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arw-UQ-7m9" userLabel="Delay Label">
-                                                                                    <rect key="frame" x="-2" y="52" width="425" height="16"/>
+                                                                                    <rect key="frame" x="-2" y="48" width="434" height="16"/>
                                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Delay:" id="nSY-ur-4WC">
                                                                                         <font key="font" usesAppearanceFont="YES"/>
                                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -146,14 +148,14 @@
                                                                                     </textFieldCell>
                                                                                 </textField>
                                                                                 <slider horizontalHuggingPriority="100" verticalHuggingPriority="750" horizontalCompressionResistancePriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="KMU-Jf-zHE" userLabel="Delay Slider">
-                                                                                    <rect key="frame" x="-2" y="18" width="425" height="28"/>
+                                                                                    <rect key="frame" x="0.0" y="24" width="430" height="16"/>
                                                                                     <sliderCell key="cell" state="on" alignment="left" minValue="1" maxValue="6" doubleValue="4" tickMarkPosition="below" numberOfTickMarks="6" allowsTickMarkValuesOnly="YES" sliderType="linear" id="l0q-DU-9vh"/>
                                                                                     <connections>
                                                                                         <action selector="didChangeDelaySlider:" target="-2" id="oeT-Wv-PkL"/>
                                                                                     </connections>
                                                                                 </slider>
                                                                                 <textField horizontalHuggingPriority="100" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ewq-qb-IFc">
-                                                                                    <rect key="frame" x="-2" y="0.0" width="425" height="16"/>
+                                                                                    <rect key="frame" x="-2" y="0.0" width="434" height="16"/>
                                                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="f3I-mo-CGi">
                                                                                         <font key="font" usesAppearanceFont="YES"/>
                                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -187,7 +189,7 @@
                                                                     </customSpacing>
                                                                 </stackView>
                                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="22F-DG-X2m" customClass="MusaicFMView">
-                                                                    <rect key="frame" x="469" y="0.0" width="256" height="160"/>
+                                                                    <rect key="frame" x="478" y="0.0" width="256" height="160"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="160" id="FoE-gr-wdx"/>
                                                                         <constraint firstAttribute="height" secondItem="22F-DG-X2m" secondAttribute="width" multiplier="10:16" id="oUz-LO-Jay"/>
@@ -207,26 +209,26 @@
                                                             </customSpacing>
                                                         </stackView>
                                                         <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="IMk-C2-mIg">
-                                                            <rect key="frame" x="0.0" y="221" width="725" height="5"/>
+                                                            <rect key="frame" x="0.0" y="169" width="725" height="5"/>
                                                         </box>
                                                         <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="48" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mWR-V0-KRw" userLabel="Services StackView">
-                                                            <rect key="frame" x="0.0" y="0.0" width="457" height="195"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="734" height="143"/>
                                                             <subviews>
                                                                 <stackView verifyAmbiguity="off" distribution="fill" orientation="vertical" alignment="leading" spacing="12" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B7y-rh-8eu" userLabel="LastFM StackView">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="195"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="143"/>
                                                                     <subviews>
                                                                         <imageView horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="AZ8-iV-HIa" userLabel="Logo">
-                                                                            <rect key="frame" x="0.0" y="171" width="180" height="24"/>
+                                                                            <rect key="frame" x="0.0" y="119" width="180" height="24"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="24" id="8m7-NI-zhA"/>
                                                                             </constraints>
                                                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="topLeft" imageScaling="proportionallyUpOrDown" image="lastfm" id="W8v-Rw-Xxr"/>
                                                                         </imageView>
                                                                         <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SkE-CP-hDj">
-                                                                            <rect key="frame" x="0.0" y="58" width="180" height="101"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="107"/>
                                                                             <subviews>
                                                                                 <textField horizontalHuggingPriority="100" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAp-bf-WXj">
-                                                                                    <rect key="frame" x="-2" y="82" width="184" height="19"/>
+                                                                                    <rect key="frame" x="-2" y="88" width="184" height="19"/>
                                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Weekly" id="WER-ru-wWR">
                                                                                         <font key="font" size="14" name="Avenir-Medium"/>
                                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -234,10 +236,10 @@
                                                                                     </textFieldCell>
                                                                                 </textField>
                                                                                 <popUpButton horizontalHuggingPriority="100" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="IMc-ag-Xl2">
-                                                                                    <rect key="frame" x="-3" y="50" width="187" height="25"/>
+                                                                                    <rect key="frame" x="0.0" y="56" width="180" height="24"/>
                                                                                     <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="cir-4s-Fvz">
                                                                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                                                        <font key="font" metaFont="menu"/>
+                                                                                        <font key="font" metaFont="message"/>
                                                                                         <menu key="menu" id="S23-ON-CmK"/>
                                                                                     </popUpButtonCell>
                                                                                     <connections>
@@ -245,10 +247,10 @@
                                                                                     </connections>
                                                                                 </popUpButton>
                                                                                 <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UXx-DD-blQ">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="46"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="48"/>
                                                                                     <subviews>
                                                                                         <button horizontalHuggingPriority="100" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ePH-fH-qW6">
-                                                                                            <rect key="frame" x="-2" y="29" width="182" height="18"/>
+                                                                                            <rect key="frame" x="0.0" y="32" width="180" height="16"/>
                                                                                             <buttonCell key="cell" type="radio" title="User Albums" bezelStyle="regularSquare" imagePosition="left" inset="2" id="944-zA-vnI">
                                                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -283,37 +285,6 @@
                                                                             </visibilityPriorities>
                                                                             <customSpacing>
                                                                                 <real value="3.4028234663852886e+38"/>
-                                                                                <real value="3.4028234663852886e+38"/>
-                                                                                <real value="3.4028234663852886e+38"/>
-                                                                            </customSpacing>
-                                                                        </stackView>
-                                                                        <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="968-fh-bvp">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="46"/>
-                                                                            <subviews>
-                                                                                <button horizontalHuggingPriority="100" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="bdn-K7-F4H">
-                                                                                    <rect key="frame" x="-2" y="29" width="182" height="18"/>
-                                                                                    <buttonCell key="cell" type="radio" title="Tags" bezelStyle="regularSquare" imagePosition="left" inset="2" id="S4U-KU-9qs">
-                                                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                                        <font key="font" usesAppearanceFont="YES"/>
-                                                                                    </buttonCell>
-                                                                                    <connections>
-                                                                                        <action selector="didSelectRadio:" target="-2" id="aRy-2K-7kh"/>
-                                                                                    </connections>
-                                                                                </button>
-                                                                                <textField horizontalHuggingPriority="100" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tTz-rb-UGb">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="22"/>
-                                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Tag" bezelStyle="round" id="DGZ-S4-vYT">
-                                                                                        <font key="font" metaFont="system"/>
-                                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                                                    </textFieldCell>
-                                                                                </textField>
-                                                                            </subviews>
-                                                                            <visibilityPriorities>
-                                                                                <integer value="1000"/>
-                                                                                <integer value="1000"/>
-                                                                            </visibilityPriorities>
-                                                                            <customSpacing>
                                                                                 <real value="3.4028234663852886e+38"/>
                                                                                 <real value="3.4028234663852886e+38"/>
                                                                             </customSpacing>
@@ -416,13 +387,77 @@
                                                                         <real value="3.4028234663852886e+38"/>
                                                                     </customSpacing>
                                                                 </stackView>
+                                                                <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="BhO-ce-Ala">
+                                                                    <rect key="frame" x="503" y="47" width="5" height="96"/>
+                                                                </box>
+                                                                <stackView verifyAmbiguity="off" distribution="fill" orientation="vertical" alignment="leading" spacing="12" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cy3-F9-Cv8" userLabel="Deezer StackView">
+                                                                    <rect key="frame" x="554" y="59" width="180" height="84"/>
+                                                                    <subviews>
+                                                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MEb-e9-mv9">
+                                                                            <rect key="frame" x="0.0" y="60" width="180" height="24"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="24" id="NUC-IQ-Y6B"/>
+                                                                            </constraints>
+                                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageAlignment="left" imageScaling="proportionallyDown" image="spotify" id="Nof-2l-J9g"/>
+                                                                        </imageView>
+                                                                        <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="968-fh-bvp">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="48"/>
+                                                                            <subviews>
+                                                                                <button horizontalHuggingPriority="100" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="bdn-K7-F4H">
+                                                                                    <rect key="frame" x="0.0" y="32" width="180" height="16"/>
+                                                                                    <buttonCell key="cell" type="radio" title="Deezer Playlists" bezelStyle="regularSquare" imagePosition="left" inset="2" id="S4U-KU-9qs">
+                                                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                                        <font key="font" usesAppearanceFont="YES"/>
+                                                                                    </buttonCell>
+                                                                                    <connections>
+                                                                                        <action selector="didSelectRadio:" target="-2" id="aRy-2K-7kh"/>
+                                                                                    </connections>
+                                                                                </button>
+                                                                                <textField horizontalHuggingPriority="100" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tTz-rb-UGb">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="24"/>
+                                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="Deezer User ID" placeholderString="Tag" bezelStyle="round" id="DGZ-S4-vYT">
+                                                                                        <font key="font" metaFont="system"/>
+                                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                                    </textFieldCell>
+                                                                                    <connections>
+                                                                                        <outlet property="delegate" destination="-2" id="M3b-RY-mPH"/>
+                                                                                    </connections>
+                                                                                </textField>
+                                                                            </subviews>
+                                                                            <visibilityPriorities>
+                                                                                <integer value="1000"/>
+                                                                                <integer value="1000"/>
+                                                                            </visibilityPriorities>
+                                                                            <customSpacing>
+                                                                                <real value="3.4028234663852886e+38"/>
+                                                                                <real value="3.4028234663852886e+38"/>
+                                                                            </customSpacing>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="180" id="gHx-Rs-IPf"/>
+                                                                    </constraints>
+                                                                    <visibilityPriorities>
+                                                                        <integer value="1000"/>
+                                                                        <integer value="1000"/>
+                                                                    </visibilityPriorities>
+                                                                    <customSpacing>
+                                                                        <real value="3.4028234663852886e+38"/>
+                                                                        <real value="3.4028234663852886e+38"/>
+                                                                    </customSpacing>
+                                                                </stackView>
                                                             </subviews>
                                                             <visibilityPriorities>
                                                                 <integer value="1000"/>
                                                                 <integer value="1000"/>
                                                                 <integer value="1000"/>
+                                                                <integer value="1000"/>
+                                                                <integer value="1000"/>
                                                             </visibilityPriorities>
                                                             <customSpacing>
+                                                                <real value="3.4028234663852886e+38"/>
+                                                                <real value="3.4028234663852886e+38"/>
                                                                 <real value="3.4028234663852886e+38"/>
                                                                 <real value="3.4028234663852886e+38"/>
                                                                 <real value="3.4028234663852886e+38"/>

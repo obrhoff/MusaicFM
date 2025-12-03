@@ -19,4 +19,7 @@
 + (NSURLComponents *)spotifyToken;
 + (NSURLComponents *)spotifyAuthentification;
 
++ (NSURLComponents*)deezerUserPlaylists:(NSString*)userId;
++ (NSURLComponents*)deezerPlaylist:(NSString*)playlistId;
+
 @end

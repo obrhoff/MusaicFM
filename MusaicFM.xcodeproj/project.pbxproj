@@ -314,7 +314,6 @@
 				TargetAttributes = {
 					E1CF25981DD7D8D500441255 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = YE33ZK7Z99;
 						ProvisioningStyle = Automatic;
 					};
 					E1FA39671DDA3FBE00186BE2 = {
@@ -530,10 +529,11 @@
 		E1CF25A41DD7D8D500441255 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_TEAM = YE33ZK7Z99;
+				DEVELOPMENT_TEAM = DWVM9CSFLC;
 				INFOPLIST_FILE = MusaicFM/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MACH_O_TYPE = mh_bundle;
@@ -550,10 +550,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Developer ID Application: Dennis Oberhoff (YE33ZK7Z99)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = YE33ZK7Z99;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = DWVM9CSFLC;
 				INFOPLIST_FILE = MusaicFM/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				MACH_O_TYPE = mh_bundle;

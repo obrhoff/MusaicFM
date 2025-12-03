@@ -10,7 +10,8 @@
 
 @interface Parser : NSObject
 
-+ (NSArray *)parseSpotifyItems:(NSArray *)itemDicts;
++ (NSArray *)parseSpotifyItems:(NSArray *)responseDicts;
++ (NSArray *)parseDeezerItems:(NSArray *)itemDicts;
 + (NSArray *)parseItems:(NSArray *)itemDicts;
 
 @end
